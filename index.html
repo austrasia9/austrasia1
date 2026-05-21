@@ -1,0 +1,2624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Austrasia — AsiaFortress Highlander Champions</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://austrasia9.github.io/austrasia1/">
+<meta property="og:title" content="Austrasia — AF Winter 2024 Champions 🥇">
+<meta name="description" content="Five nations. One debut season. AF Winter 2024 Highlander Champions.">
+<meta property="og:description" content="Five nations. One debut season. AF Winter 2024 Highlander Champions. Austrasia compete in AsiaFortress 9v9 Highlander across SG, TH, MY, TW & AU.">
+<meta property="og:site_name" content="AsiaFortress Highlander">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://austrasia9.github.io/austrasia1/">
+<meta name="twitter:title" content="Austrasia — AF Winter 2024 Champions 🥇">
+<meta name="twitter:description" content="AsiaFortress Highlander 9v9. AF Winter 2024 Champions. SG · TH · MY · TW · AU">
+<meta name="theme-color" content="#E8621A">
+<meta property="og:image" content="" id="ogImageMeta">
+<!-- favicon: clean geometric hex logo -->
+<link rel="icon" id="faviconLink" type="image/png" href="">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKWC0GNWBQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JKWC0GNWBQ');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+:root{
+  --af-orange:#E8621A;
+  --af-dark:#111110;
+  --af-surface:#1a1917;
+  --af-surface2:#201e1b;
+  --af-border:#2e2c28;
+  --af-text:#e8e4d8;
+  --af-muted:#8a8474;
+  --af-gold:#c9a84c;
+  --af-gold-dim:rgba(201,168,76,0.25);
+  --af-win:#3ae07a;
+  --af-loss:#e03a3a;
+}
+body{
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(232,98,26,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(201,168,76,0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(30,20,10,0.4) 0%, transparent 70%),
+    #0c0c0b;
+  min-height:100vh;display:flex;align-items:flex-start;justify-content:center;
+  padding:2rem 1rem;font-family:'Barlow',sans-serif;
+}
+
+/* ── Trophy marquee ── */
+.trophy-banner{background:linear-gradient(90deg,#1a1200,#2a1e00,#1a1200);border-bottom:1px solid var(--af-gold);overflow:hidden;height:28px;display:flex;align-items:center;position:relative;}
+.trophy-banner::before,.trophy-banner::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;}
+.trophy-banner::before{left:0;background:linear-gradient(90deg,#1a1200,transparent);}
+.trophy-banner::after{right:0;background:linear-gradient(270deg,#1a1200,transparent);}
+.marquee-track{display:flex;animation:marquee 18s linear infinite;white-space:nowrap;}
+.marquee-track span{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--af-gold);letter-spacing:0.18em;padding:0 3rem;}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ── Page ── */
+.page{background:var(--af-dark);color:var(--af-text);width:100%;max-width:820px;position:relative;overflow:hidden;border:0.5px solid var(--af-border);}
+.scanlines{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.08) 2px,rgba(0,0,0,0.08) 4px);pointer-events:none;z-index:0;}
+.content{position:relative;z-index:1;}
+
+/* ── Header ── */
+.header{padding:2rem;display:flex;align-items:center;gap:1.5rem;border-bottom:2px solid var(--af-orange);flex-wrap:wrap;}
+.logo-block{flex:1;min-width:180px;}
+.tag{font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--af-orange);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.4rem;}
+.team-name{font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1;color:var(--af-text);letter-spacing:0.04em;}
+.team-name span{color:var(--af-orange);}
+.format-badge{display:inline-block;background:var(--af-orange);color:#fff;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.15em;padding:4px 12px;margin-top:0.5rem;}
+.stat-cluster{display:flex;gap:1.2rem;flex-wrap:wrap;align-items:flex-start;}
+.stat{text-align:right;}
+.stat-val{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--af-gold);line-height:1;}
+.stat-val.wl{font-size:20px;line-height:1.25;}
+.stat-lbl{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);letter-spacing:0.1em;text-transform:uppercase;}
+.stat-flags{display:flex;gap:3px;justify-content:flex-end;margin-top:4px;flex-wrap:wrap;}
+.stat-flags img{width:18px;height:12px;object-fit:cover;border:0.5px solid rgba(255,255,255,0.08);}
+
+/* ── Sections ── */
+.section{padding:1.75rem 2rem;}
+.section-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.08em;color:var(--af-text);}
+.section-line{flex:1;height:1px;background:var(--af-border);}
+.divider{height:1px;background:var(--af-border);margin:0 2rem;}
+
+/* ══════════════════════════════════════════
+   SEASON HISTORY — ACCORDION
+══════════════════════════════════════════ */
+.season-accordion{display:flex;flex-direction:column;gap:0.6rem;}
+
+/* Each season is a <details> element */
+details.season-block{
+  border:0.5px solid var(--af-border);
+  overflow:hidden;
+  transition:border-color 0.2s;
+}
+details.season-block[open]{border-color:rgba(201,168,76,0.4);}
+
+details.season-block > summary{
+  display:flex;align-items:center;gap:1rem;
+  padding:1rem 1.25rem;
+  cursor:pointer;list-style:none;user-select:none;
+  background:var(--af-surface);
+  position:relative;
+}
+details.season-block > summary::-webkit-details-marker{display:none;}
+details.season-block > summary:hover{background:var(--af-surface2);}
+
+.sb-season-name{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:0.08em;color:var(--af-text);flex:1;}
+.sb-record{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);letter-spacing:0.1em;}
+.sb-outcome{
+  font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.12em;
+  color:var(--af-gold);padding:2px 10px;
+  border:0.5px solid var(--af-gold-dim);
+  background:rgba(201,168,76,0.07);
+}
+.sb-outcome.tbd{color:var(--af-muted);border-color:var(--af-border);background:transparent;}
+.sb-chevron{
+  width:20px;height:20px;border:0.5px solid var(--af-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;color:var(--af-muted);flex-shrink:0;
+  transition:transform 0.22s,border-color 0.2s;
+}
+details.season-block[open] .sb-chevron{transform:rotate(180deg);border-color:var(--af-gold-dim);}
+
+
+/* ── Phase headers (Regular Season / Playoffs) ── */
+.phase-header{
+  display:flex;align-items:center;gap:0.75rem;
+  padding:0.65rem 1.25rem;
+  background:rgba(0,0,0,0.2);
+  border-bottom:1px solid var(--af-border);
+}
+.phase-header-title{
+  font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--af-muted);
+}
+.phase-header-line{flex:1;height:1px;background:var(--af-border);}
+.phase-header.playoffs .phase-header-title{color:var(--af-gold);opacity:0.8;}
+.phase-header.playoffs .phase-header-line{background:var(--af-gold-dim);}
+
+/* ── Round rows ── */
+.round-row{
+  display:grid;
+  grid-template-columns:52px 1fr auto auto;
+  align-items:center;gap:0.75rem;
+  padding:0.6rem 1.25rem;
+  border-bottom:1px solid rgba(46,44,40,0.5);
+  border-left:2px solid transparent;
+  transition:background 0.12s,border-left-color 0.12s;
+  position:relative;
+}
+.round-row:last-child{border-bottom:none;}
+.round-row:hover{background:rgba(255,255,255,0.02);}
+.round-row.win{border-left-color:var(--af-win);}
+.round-row.loss{border-left-color:var(--af-loss);}
+.round-row.bye,.round-row.ff{border-left-color:var(--af-border);opacity:0.6;}
+
+.rr-num{
+  font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);
+  letter-spacing:0.08em;
+}
+.rr-opp{
+  font-size:13px;font-weight:500;color:var(--af-text);
+  min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.rr-map{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--af-muted);margin-left:6px;font-weight:400;
+  letter-spacing:0.04em;
+}
+.rr-score{
+  font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0.05em;
+  white-space:nowrap;text-align:right;min-width:40px;
+}
+.rr-score.win{color:var(--af-win);}
+.rr-score.loss{color:var(--af-loss);}
+.rr-score.neutral{color:var(--af-muted);font-size:13px;}
+.rr-logs{
+  display:flex;gap:4px;align-items:center;flex-wrap:nowrap;
+}
+.rr-log{
+  font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-muted);
+  text-decoration:none;border:0.5px solid var(--af-border);
+  padding:2px 6px;letter-spacing:0.06em;
+  transition:all 0.12s;white-space:nowrap;
+}
+.rr-log:hover{color:var(--af-orange);border-color:var(--af-orange);}
+
+/* ── Multi-match rows ── */
+.round-multi{
+  border-bottom:1px solid rgba(46,44,40,0.5);
+  border-left:2px solid var(--af-win);
+}
+.round-multi:last-child{border-bottom:none;}
+.round-multi.loss-multi{border-left-color:var(--af-loss);}
+.rr-multi-header{
+  display:grid;
+  grid-template-columns:52px 1fr auto auto;
+  align-items:center;gap:0.75rem;
+  padding:0.6rem 1.25rem 0.4rem;
+  cursor:pointer;
+}
+.rr-multi-label{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--af-muted);letter-spacing:0.08em;margin-left:4px;
+}
+.rr-sub-matches{
+  padding:0 1.25rem 0.5rem 3.5rem;
+  display:flex;flex-direction:column;gap:0.3rem;
+}
+.rr-sub-match{
+  display:grid;grid-template-columns:1fr auto auto;
+  align-items:center;gap:0.75rem;
+  padding:0.3rem 0.6rem;
+  background:rgba(0,0,0,0.15);
+  border-left:1px solid rgba(46,44,40,0.6);
+}
+.rsm-map{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);letter-spacing:0.05em;}
+.rsm-score{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:0.04em;}
+.rsm-score.win{color:var(--af-win);}
+.rsm-score.loss{color:var(--af-loss);}
+
+/* ── Playoffs round cards ── */
+.playoff-card{
+  margin:0.75rem 1.25rem;
+  border:0.5px solid var(--af-border);
+  border-left:3px solid var(--af-win);
+  overflow:hidden;
+}
+.playoff-card-header{
+  display:flex;align-items:center;gap:0.75rem;
+  padding:0.7rem 1rem;
+  background:rgba(58,224,122,0.04);
+  border-bottom:1px solid var(--af-border);
+}
+.pc-stage{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-muted);letter-spacing:0.12em;text-transform:uppercase;}
+.pc-opp{font-weight:600;font-size:14px;color:var(--af-text);flex:1;}
+.pc-result{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.08em;color:var(--af-win);background:rgba(58,224,122,0.08);padding:2px 10px;border:0.5px solid rgba(58,224,122,0.25);}
+.playoff-match-row{
+  display:grid;grid-template-columns:1fr auto auto;
+  align-items:center;gap:0.75rem;
+  padding:0.5rem 1rem;
+  border-top:1px solid rgba(46,44,40,0.45);
+  font-size:13px;
+}
+.pm-map{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);letter-spacing:0.06em;}
+.pm-score{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0.05em;}
+.pm-score.win{color:var(--af-win);}
+.pm-log{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-muted);text-decoration:none;border:0.5px solid var(--af-border);padding:2px 6px;transition:all 0.12s;}
+.pm-log:hover{color:var(--af-orange);border-color:var(--af-orange);}
+
+/* ── Grand Final card ── */
+.grand-final-card{
+  margin:0.75rem 1.25rem 1.25rem;
+  border:1.5px solid var(--af-gold);
+  background:linear-gradient(135deg,rgba(201,168,76,0.06) 0%,transparent 55%);
+  position:relative;overflow:hidden;
+}
+.grand-final-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 38%,rgba(201,168,76,0.08) 50%,transparent 62%);
+  background-size:200% 100%;
+  animation:shimmer 4s ease-in-out infinite;pointer-events:none;
+}
+@keyframes shimmer{0%,100%{background-position:220% 0;}50%{background-position:-220% 0;}}
+.gf-crown{position:absolute;top:0.7rem;right:1.1rem;font-size:20px;opacity:0.3;pointer-events:none;}
+.gf-header{
+  padding:0.9rem 1.2rem;
+  border-bottom:1px solid rgba(201,168,76,0.22);
+  display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;
+}
+.gf-badge{
+  font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:0.16em;
+  background:var(--af-gold);color:#111;padding:2px 9px;text-transform:uppercase;font-weight:700;
+}
+.gf-opp{font-weight:700;font-size:16px;color:var(--af-text);flex:1;}
+.gf-result{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:0.1em;color:var(--af-gold);}
+.gf-match-row{
+  display:grid;grid-template-columns:1fr auto auto;
+  align-items:center;gap:0.75rem;
+  padding:0.55rem 1.2rem;
+  border-top:1px solid rgba(201,168,76,0.12);
+  font-size:13px;
+}
+.gf-match-row:first-child{border-top:none;}
+.gf-map{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-gold);letter-spacing:0.07em;opacity:0.75;}
+.gf-score{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:0.05em;color:var(--af-gold);}
+.gf-log{font-family:'Share Tech Mono',monospace;font-size:9px;color:rgba(201,168,76,0.5);text-decoration:none;border:0.5px solid rgba(201,168,76,0.22);padding:2px 6px;transition:all 0.12s;}
+.gf-log:hover{color:var(--af-gold);border-color:var(--af-gold);}
+.gf-combined-row{
+  padding:0.6rem 1.2rem;border-top:1px solid rgba(201,168,76,0.15);
+  display:flex;align-items:center;gap:0.5rem;
+}
+.gf-combined-lbl{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-muted);letter-spacing:0.1em;opacity:0.6;}
+.gf-combined-link{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);text-decoration:none;border:0.5px solid var(--af-border);padding:3px 10px;letter-spacing:0.1em;transition:all 0.15s;}
+.gf-combined-link:hover{color:var(--af-gold);border-color:var(--af-gold);}
+
+/* Upcoming season stub */
+details.season-block.upcoming > summary{opacity:0.45;cursor:default;pointer-events:none;}
+
+/* u2500u2500 Smooth accordion animation u2500u2500 */
+.season-body{
+  border-top:1px solid var(--af-border);
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows 0.38s cubic-bezier(0.4,0,0.2,1);
+}
+.season-body-inner{overflow:hidden;}
+details.season-block[open] .season-body{grid-template-rows:1fr;}
+
+/* u2500u2500 Win/loss streak dots u2500u2500 */
+.streak-row{display:flex;gap:3px;align-items:center;flex-wrap:nowrap;overflow:hidden;max-width:160px;}
+.streak-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.streak-dot.w{background:var(--af-win);}
+.streak-dot.l{background:var(--af-loss);}
+.streak-dot.b{background:var(--af-muted);opacity:0.4;}
+
+/* u2500u2500 Section entrance animation u2500u2500 */
+@keyframes sectionIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.section,.divider{opacity:0;animation:sectionIn 0.45s ease forwards;}
+.header{animation:sectionIn 0.45s ease 0.05s forwards;opacity:0;}
+.trophy-banner{animation:sectionIn 0.3s ease forwards;opacity:0;}
+.section:nth-of-type(1){animation-delay:0.12s;}
+.section:nth-of-type(2){animation-delay:0.22s;}
+.section:nth-of-type(3){animation-delay:0.32s;}
+.section:nth-of-type(4){animation-delay:0.40s;}
+.section:nth-of-type(5){animation-delay:0.46s;}
+.divider:nth-of-type(1){animation-delay:0.18s;}
+.divider:nth-of-type(2){animation-delay:0.28s;}
+
+/* u2500u2500 Jump to playoffs link u2500u2500 */
+.jump-playoffs{display:inline-flex;align-items:center;gap:5px;font-family:"Share Tech Mono",monospace;font-size:9px;color:var(--af-gold);opacity:0.7;text-decoration:none;border:0.5px solid var(--af-gold-dim);padding:2px 8px;letter-spacing:0.1em;transition:all 0.15s;}
+.jump-playoffs:hover{opacity:1;border-color:var(--af-gold);}
+
+
+/* ══════════════════════════════════════════
+   ROSTER CARDS
+══════════════════════════════════════════ */
+.filter-bar{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1.1rem;}
+.filter-btn{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:0.1em;padding:4px 8px;border:0.5px solid var(--af-border);background:transparent;color:var(--af-muted);cursor:pointer;transition:all 0.15s;text-transform:uppercase;}
+.filter-btn:hover{border-color:var(--af-orange);color:var(--af-orange);}
+.filter-btn.active{background:var(--af-orange);border-color:var(--af-orange);color:#fff;}
+.filter-btn.all-btn.active{background:transparent;border-color:var(--af-text);color:var(--af-text);}
+.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:0.6rem;}
+@keyframes cardIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+.player-card{background:var(--af-surface);border:0.5px solid var(--af-border);padding:0;display:flex;align-items:stretch;transition:border-color 0.15s,transform 0.1s,opacity 0.2s,filter 0.2s;text-decoration:none;color:inherit;cursor:pointer;position:relative;overflow:hidden;opacity:0;animation:cardIn 0.35s ease forwards;}
+.roster-grid .player-card:nth-child(1){animation-delay:0.05s;}
+.roster-grid .player-card:nth-child(2){animation-delay:0.10s;}
+.roster-grid .player-card:nth-child(3){animation-delay:0.15s;}
+.roster-grid .player-card:nth-child(4){animation-delay:0.20s;}
+.roster-grid .player-card:nth-child(5){animation-delay:0.25s;}
+.roster-grid .player-card:nth-child(6){animation-delay:0.30s;}
+.roster-grid .player-card:nth-child(7){animation-delay:0.35s;}
+.roster-grid .player-card:nth-child(8){animation-delay:0.40s;}
+.roster-grid .player-card:nth-child(9){animation-delay:0.45s;}
+.player-card:hover{border-color:var(--af-orange);transform:translateY(-1px);}
+.player-card:hover .tooltip{opacity:1;transform:translateY(0);}
+.player-card.sub{opacity:0;border-style:dashed;filter:saturate(0.45) brightness(0.85);}
+.player-card.sub.anim-done{opacity:0.8;}
+.player-card.sub:hover{opacity:1!important;filter:saturate(1) brightness(1)!important;}
+.player-card.dimmed{opacity:0.15!important;filter:saturate(0.1) brightness(0.5)!important;transform:none!important;pointer-events:none;}
+.country-bar{width:3px;flex-shrink:0;}
+.card-inner{display:flex;align-items:center;gap:0.75rem;padding:0.85rem 0.9rem;flex:1;min-width:0;}
+.player-avatar{width:38px;height:38px;border-radius:4px;object-fit:cover;flex-shrink:0;border:1px solid var(--af-border);background:var(--af-surface2);}
+.class-icon{width:34px;height:34px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-family:'Share Tech Mono',monospace;font-size:10px;font-weight:700;letter-spacing:0.05em;flex-shrink:0;}
+.scout .class-icon{background:#1d2e1a;color:#5fc45c;}
+.soldier .class-icon{background:#2e1e1a;color:#e05c3a;}
+.pyro .class-icon{background:#2e221a;color:#e07a3a;}
+.demo .class-icon{background:#1e1a2e;color:#7a5ce0;}
+.heavy .class-icon{background:#2e1a1a;color:#e03a3a;}
+.engi .class-icon{background:#2e2a1a;color:#e0c03a;}
+.medic .class-icon{background:#1a2a2e;color:#3ab8e0;}
+.sniper .class-icon{background:#1a2e22;color:#3ae07a;}
+.spy .class-icon{background:#281a2e;color:#c03ae0;}
+.flex .class-icon{background:#1e1e1e;color:#e8e4d8;}
+.player-meta{flex:1;min-width:0;}
+.player-class-label{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-muted);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.player-name-row{display:flex;align-items:center;gap:5px;margin-top:2px;flex-wrap:wrap;}
+.player-name{font-size:14px;font-weight:600;color:var(--af-text);}
+.captain-badge{font-family:'Share Tech Mono',monospace;font-size:8px;color:var(--af-gold);border:0.5px solid var(--af-gold);padding:1px 4px;letter-spacing:0.08em;white-space:nowrap;}
+.sub-badge{font-family:'Share Tech Mono',monospace;font-size:8px;color:var(--af-muted);border:0.5px solid var(--af-border);padding:1px 4px;letter-spacing:0.08em;white-space:nowrap;}
+.flag-img{width:22px;height:15px;object-fit:cover;border:0.5px solid rgba(255,255,255,0.1);flex-shrink:0;margin-left:auto;}
+.tooltip{position:absolute;bottom:0;left:0;right:0;background:rgba(232,98,26,0.92);color:#fff;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:0.1em;text-align:center;padding:4px 6px;opacity:0;transform:translateY(4px);transition:opacity 0.15s,transform 0.15s;pointer-events:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.sg .country-bar{background:linear-gradient(180deg,#EF3340 50%,#fff 50%);}
+.th .country-bar{background:linear-gradient(180deg,#A51931 20%,#F4F5F8 20%,#F4F5F8 40%,#2D2A4A 40%,#2D2A4A 60%,#F4F5F8 60%,#F4F5F8 80%,#A51931 80%);}
+.my .country-bar{background:linear-gradient(180deg,#CC0001 30%,#fff 30%,#fff 50%,#CC0001 50%,#CC0001 70%,#fff 70%);}
+.tw .country-bar{background:linear-gradient(180deg,#FE0000 60%,#000095 60%);}
+.au .country-bar{background:linear-gradient(180deg,#00008B 50%,#CC0000 50%);}
+
+/* ── Share bar ── */
+.share-bar{display:flex;gap:0.75rem;padding:1rem 2rem;border-top:1px solid var(--af-border);flex-wrap:wrap;align-items:center;}
+.share-btn{display:flex;align-items:center;gap:6px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);background:transparent;border:0.5px solid var(--af-border);padding:5px 10px;cursor:pointer;letter-spacing:0.1em;transition:all 0.15s;}
+.share-btn:hover{color:var(--af-orange);border-color:var(--af-orange);}
+.share-btn svg{width:12px;height:12px;fill:currentColor;flex-shrink:0;}
+.share-copied{color:var(--af-win)!important;border-color:var(--af-win)!important;}
+.share-card-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:100;align-items:center;justify-content:center;padding:1rem;}
+.share-card-overlay.visible{display:flex;}
+.share-card{background:var(--af-dark);border:1.5px solid var(--af-gold);max-width:480px;width:100%;padding:2rem;position:relative;text-align:center;}
+.share-card-close{position:absolute;top:0.75rem;right:0.75rem;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--af-muted);background:none;border:none;cursor:pointer;letter-spacing:0.1em;}
+.share-card-close:hover{color:var(--af-orange);}
+.sc-title{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--af-text);letter-spacing:0.04em;line-height:1;margin-top:0.5rem;}
+.sc-title span{color:var(--af-orange);}
+.sc-badge{display:inline-block;background:var(--af-gold);color:#111;font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:0.15em;padding:3px 14px;margin:0.75rem 0;}
+.sc-stat-row{display:flex;justify-content:center;gap:2rem;margin:1rem 0;}
+.sc-stat-val{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--af-gold);line-height:1;}
+.sc-stat-lbl{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-muted);letter-spacing:0.1em;text-transform:uppercase;}
+.sc-flags{display:flex;justify-content:center;gap:5px;margin:0.75rem 0;}
+.sc-flags img{width:24px;height:16px;object-fit:cover;border:0.5px solid rgba(255,255,255,0.1);}
+.sc-footer-text{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-muted);letter-spacing:0.12em;margin-top:1.25rem;opacity:0.7;}
+.sc-actions{display:flex;gap:0.5rem;justify-content:center;margin-top:1.25rem;}
+.sc-action-btn{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.1em;padding:6px 16px;border:0.5px solid var(--af-border);background:transparent;color:var(--af-muted);cursor:pointer;transition:all 0.15s;}
+.sc-action-btn:hover{color:var(--af-orange);border-color:var(--af-orange);}
+.sc-action-btn.primary{background:var(--af-orange);border-color:var(--af-orange);color:#fff;}
+
+/* ── Social / Footer ── */
+.social-bar{display:flex;gap:0.75rem;padding:1rem 2rem;border-top:1px solid var(--af-border);flex-wrap:wrap;}
+.social-link{display:flex;align-items:center;gap:6px;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);text-decoration:none;letter-spacing:0.1em;border:0.5px solid var(--af-border);padding:5px 10px;transition:color 0.15s,border-color 0.15s;}
+.social-link:hover{color:var(--af-orange);border-color:var(--af-orange);}
+.social-icon{width:13px;height:13px;fill:currentColor;flex-shrink:0;}
+.footer{padding:1.25rem 2rem;border-top:1px solid var(--af-border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}
+.footer-brand{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);letter-spacing:0.12em;}
+.footer-status{display:flex;align-items:center;gap:0.5rem;font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);}
+.dot{width:6px;height:6px;border-radius:50%;background:#3ae07a;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.footer-updated{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);letter-spacing:0.08em;opacity:0.7;}
+
+/* ── Responsive ── */
+@media(max-width:600px){
+  body{padding:0;}
+  .page{border:none;}
+  .header{padding:1.5rem;gap:1rem;}
+  .team-name{font-size:40px;}
+  .stat-cluster{gap:1rem;}
+  .section{padding:1.25rem 1.5rem;}
+  .divider{margin:0 1.5rem;}
+  .social-bar,.share-bar{padding:1rem 1.5rem;}
+  .footer{padding:1rem 1.5rem;}
+  .roster-grid{grid-template-columns:1fr 1fr;}
+  .round-row{grid-template-columns:44px 1fr auto;}
+  .rr-logs{display:none;}
+  .rr-multi-header{grid-template-columns:44px 1fr auto;}
+  .rr-map{display:none;}
+}
+@media(max-width:400px){
+  .roster-grid{grid-template-columns:1fr;}
+  .team-name{font-size:34px;}
+}
+
+/* ── Animated counter ── */
+.stat-val[data-count]{transition:color 0.3s;}
+
+/* ── Season progress bar ── */
+.season-progress{
+  display:flex;height:5px;gap:1px;
+  margin:0 1.25rem 0;border-radius:2px;overflow:hidden;
+}
+.sp-seg{height:100%;flex:1;border-radius:1px;}
+.sp-seg.w{background:var(--af-win);}
+.sp-seg.l{background:var(--af-loss);}
+.sp-seg.b{background:var(--af-muted);opacity:0.35;}
+
+/* ── Active indicator on player cards ── */
+.active-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#3ae07a;flex-shrink:0;
+  box-shadow:0 0 5px rgba(58,224,122,0.7);
+  animation:pulse 2s infinite;
+}
+.active-dot.inactive{background:var(--af-muted);box-shadow:none;animation:none;opacity:0.5;}
+
+/* ── Player profile modal ── */
+.profile-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,0.82);z-index:200;
+  align-items:center;justify-content:center;padding:1rem;
+}
+.profile-overlay.visible{display:flex;}
+.profile-modal{
+  background:var(--af-dark);
+  border:0.5px solid var(--af-border);
+  border-top:2px solid var(--af-orange);
+  max-width:480px;width:100%;
+  position:relative;overflow:hidden;
+  animation:cardIn 0.2s ease;
+}
+.pm-close{
+  position:absolute;top:0.75rem;right:1rem;
+  font-family:'Share Tech Mono',monospace;font-size:11px;
+  color:var(--af-muted);background:none;border:none;cursor:pointer;
+  letter-spacing:0.1em;z-index:1;
+}
+.pm-close:hover{color:var(--af-orange);}
+.pm-header{
+  display:flex;align-items:center;gap:1rem;
+  padding:1.25rem 1.25rem 1rem;
+  border-bottom:1px solid var(--af-border);
+}
+.pm-avatar-large{
+  width:60px;height:60px;border-radius:5px;
+  object-fit:cover;border:1px solid var(--af-border);
+  background:var(--af-surface2);flex-shrink:0;
+}
+.pm-avatar-icon{
+  width:60px;height:60px;border-radius:5px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Share Tech Mono',monospace;font-size:14px;
+  font-weight:700;flex-shrink:0;
+}
+.pm-head-info{flex:1;min-width:0;}
+.pm-head-name{
+  font-family:'Bebas Neue',sans-serif;font-size:28px;
+  color:var(--af-text);letter-spacing:0.04em;line-height:1;
+}
+.pm-head-class{
+  font-family:'Share Tech Mono',monospace;font-size:10px;
+  color:var(--af-muted);letter-spacing:0.12em;text-transform:uppercase;
+  margin-top:3px;
+}
+.pm-head-country{
+  display:flex;align-items:center;gap:5px;margin-top:6px;
+}
+.pm-head-country img{width:20px;height:13px;object-fit:cover;border:0.5px solid rgba(255,255,255,0.1);}
+.pm-head-country span{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-muted);letter-spacing:0.1em;}
+.pm-body{padding:1rem 1.25rem;}
+.pm-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0.5rem 0;border-bottom:1px solid rgba(46,44,40,0.4);
+  font-size:13px;
+}
+.pm-row:last-child{border-bottom:none;}
+.pm-label{font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--af-muted);letter-spacing:0.1em;text-transform:uppercase;}
+.pm-value{color:var(--af-text);font-weight:500;text-align:right;}
+.pm-value.gold{color:var(--af-gold);}
+.pm-value.green{color:var(--af-win);}
+.pm-footer{
+  padding:0.75rem 1.25rem;border-top:1px solid var(--af-border);
+  display:flex;gap:0.5rem;
+}
+.pm-steam-btn{
+  display:flex;align-items:center;gap:6px;
+  font-family:'Share Tech Mono',monospace;font-size:10px;
+  color:var(--af-muted);text-decoration:none;
+  border:0.5px solid var(--af-border);padding:5px 12px;
+  letter-spacing:0.1em;transition:all 0.15s;
+}
+.pm-steam-btn:hover{color:var(--af-orange);border-color:var(--af-orange);}
+.pm-active-badge{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  letter-spacing:0.1em;padding:3px 8px;
+  display:flex;align-items:center;gap:5px;
+}
+.pm-active-badge.active{color:var(--af-win);border:0.5px solid rgba(58,224,122,0.3);background:rgba(58,224,122,0.07);}
+.pm-active-badge.inactive{color:var(--af-muted);border:0.5px solid var(--af-border);}
+
+/* ── Discord embed card ── */
+.discord-section{padding:0 2rem 1.75rem;}
+.discord-card{
+  background:var(--af-surface);
+  border:0.5px solid var(--af-border);
+  border-left:3px solid #5865F2;
+  display:flex;align-items:center;gap:1.25rem;
+  padding:1rem 1.25rem;
+  text-decoration:none;color:inherit;
+  transition:border-color 0.15s,background 0.15s;
+  position:relative;overflow:hidden;
+}
+.discord-card:hover{background:var(--af-surface2);border-color:#5865F2;}
+.discord-logo{
+  width:40px;height:40px;border-radius:50%;
+  background:#5865F2;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.discord-logo svg{width:22px;height:22px;fill:#fff;}
+.discord-info{flex:1;min-width:0;}
+.discord-server-name{
+  font-family:'Bebas Neue',sans-serif;font-size:17px;
+  letter-spacing:0.06em;color:var(--af-text);
+}
+.discord-desc{
+  font-family:'Share Tech Mono',monospace;font-size:10px;
+  color:var(--af-muted);letter-spacing:0.08em;margin-top:3px;
+}
+.discord-meta{
+  display:flex;gap:0.75rem;margin-top:6px;
+}
+.discord-pill{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  padding:2px 7px;letter-spacing:0.08em;
+  border:0.5px solid var(--af-border);color:var(--af-muted);
+}
+.discord-pill.online{border-color:rgba(58,224,122,0.35);color:var(--af-win);}
+.discord-join-btn{
+  font-family:'Share Tech Mono',monospace;font-size:10px;
+  color:#fff;background:#5865F2;border:none;
+  padding:6px 14px;letter-spacing:0.1em;cursor:pointer;
+  flex-shrink:0;transition:background 0.15s;
+}
+.discord-join-btn:hover{background:#4752C4;}
+
+/* ── Page load progress bar ── */
+#page-progress{
+  position:fixed;top:0;left:0;height:2px;width:0%;
+  background:var(--af-orange);z-index:9999;
+  transition:width 0.25s ease,opacity 0.4s ease;
+  box-shadow:0 0 8px rgba(232,98,26,0.7);
+  pointer-events:none;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:#0c0c0b;}
+::-webkit-scrollbar-thumb{background:var(--af-border);border-radius:3px;}
+::-webkit-scrollbar-thumb:hover{background:var(--af-orange);}
+html{scrollbar-width:thin;scrollbar-color:var(--af-border) #0c0c0b;}
+
+/* ── Map pills ── */
+.map-pill{
+  display:inline-block;
+  font-family:'Share Tech Mono',monospace;font-size:8px;
+  letter-spacing:0.06em;padding:1px 5px;
+  border-radius:2px;margin-left:5px;font-weight:700;
+  vertical-align:middle;flex-shrink:0;
+}
+.map-swiftwater{background:rgba(58,160,224,0.18);color:#5eb4e0;border:0.5px solid rgba(58,160,224,0.3);}
+.map-product{background:rgba(138,84,186,0.18);color:#b07fd4;border:0.5px solid rgba(138,84,186,0.3);}
+.map-upward{background:rgba(232,98,26,0.15);color:#e8874a;border:0.5px solid rgba(232,98,26,0.3);}
+.map-ashville{background:rgba(58,224,122,0.12);color:#5ece8a;border:0.5px solid rgba(58,224,122,0.25);}
+.map-vigil{background:rgba(201,168,76,0.15);color:#c9a84c;border:0.5px solid rgba(201,168,76,0.3);}
+.map-proot{background:rgba(224,58,58,0.15);color:#e07a7a;border:0.5px solid rgba(224,58,58,0.3);}
+.map-steel{background:rgba(140,140,140,0.15);color:#aaaaaa;border:0.5px solid rgba(140,140,140,0.3);}
+
+/* ── Logs.tf link tooltip ── */
+.rr-log,.pm-log,.gf-log{position:relative;}
+.rr-log::after,.pm-log::after,.gf-log::after{
+  content:attr(data-tip);
+  position:absolute;bottom:calc(100% + 6px);right:0;
+  background:#1a1917;border:0.5px solid var(--af-border);
+  color:var(--af-text);font-size:9px;letter-spacing:0.06em;
+  padding:4px 8px;white-space:nowrap;pointer-events:none;
+  opacity:0;transition:opacity 0.15s;z-index:10;
+  font-family:'Share Tech Mono',monospace;
+}
+.rr-log:hover::after,.pm-log:hover::after,.gf-log:hover::after{opacity:1;}
+
+/* ── H2H badge ── */
+.h2h-badge{
+  font-family:'Share Tech Mono',monospace;font-size:8px;
+  letter-spacing:0.07em;padding:1px 6px;
+  border:0.5px solid rgba(201,168,76,0.3);
+  color:var(--af-gold);background:rgba(201,168,76,0.07);
+  white-space:nowrap;flex-shrink:0;
+}
+
+/* ── Grand final quote ── */
+.gf-quote{
+  margin:0.75rem 1.25rem 0;
+  border-left:3px solid var(--af-gold);
+  padding:0.75rem 1rem;
+  background:rgba(201,168,76,0.04);
+  position:relative;
+}
+.gf-quote-text{
+  font-family:'Barlow',sans-serif;font-size:13px;
+  font-weight:500;font-style:italic;
+  color:var(--af-text);line-height:1.5;
+  opacity:0.9;
+}
+.gf-quote-attr{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--af-gold);letter-spacing:0.1em;
+  margin-top:0.4rem;opacity:0.75;
+}
+
+/* ── Trophy graphic in season summary ── */
+.sb-trophy{
+  font-size:18px;
+  filter:drop-shadow(0 0 6px rgba(201,168,76,0.5));
+  flex-shrink:0;
+}
+
+/* ── Logo parallax ── */
+#mainLogo{transition:transform 0.12s ease;transform-style:preserve-3d;}
+
+/* ── Confetti canvas ── */
+#confetti-canvas{
+  position:fixed;inset:0;pointer-events:none;z-index:8000;
+}
+
+/* ── Responsive: hide map pills on tiny screens ── */
+@media(max-width:400px){.map-pill{display:none;}}
+
+/* ── Ambient particles canvas ── */
+#particles-canvas{
+  position:fixed;inset:0;pointer-events:none;z-index:0;opacity:1;
+}
+body{position:relative;}
+
+/* ── Card flip ── */
+.roster-grid{perspective:900px;}
+.player-card{
+  transform-style:preserve-3d;
+  transition:transform 0.52s cubic-bezier(0.4,0,0.2,1),border-color 0.15s,opacity 0.2s,filter 0.2s !important;
+}
+.player-card.flipped{transform:rotateY(180deg) !important;}
+.player-card:hover:not(.flipped){transform:translateY(-2px) !important;}
+
+/* Front face — existing content */
+.card-face-front{
+  position:absolute;inset:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  display:flex;align-items:stretch;width:100%;
+}
+
+/* Back face — profile info */
+.card-face-back{
+  position:absolute;inset:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  transform:rotateY(180deg);
+  background:var(--af-surface);
+  border-left:3px solid var(--af-orange);
+  display:flex;flex-direction:column;
+  padding:0.7rem 0.75rem;
+  gap:0.3rem;
+  overflow:hidden;
+}
+.cfb-avatar{
+  width:32px;height:32px;border-radius:3px;
+  object-fit:cover;border:1px solid var(--af-border);
+  background:var(--af-surface2);flex-shrink:0;
+}
+.cfb-avatar-icon{
+  width:32px;height:32px;border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Share Tech Mono',monospace;font-size:9px;font-weight:700;
+  flex-shrink:0;
+}
+.cfb-header{display:flex;align-items:center;gap:0.5rem;margin-bottom:0.2rem;}
+.cfb-name{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:0.05em;color:var(--af-text);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.cfb-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(46,44,40,0.4);padding-top:0.25rem;}
+.cfb-lbl{font-family:'Share Tech Mono',monospace;font-size:8px;color:var(--af-muted);letter-spacing:0.08em;text-transform:uppercase;}
+.cfb-val{font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--af-text);font-weight:600;}
+.cfb-val.gold{color:var(--af-gold);}
+.cfb-val.green{color:var(--af-win);}
+.cfb-steam-hint{
+  font-family:'Share Tech Mono',monospace;font-size:8px;color:var(--af-muted);
+  letter-spacing:0.07em;margin-top:auto;padding-top:0.3rem;
+  border-top:1px solid rgba(46,44,40,0.4);opacity:0.6;
+}
+.card-flip-hint{
+  position:absolute;top:4px;right:5px;
+  font-family:'Share Tech Mono',monospace;font-size:7px;
+  color:var(--af-muted);opacity:0;letter-spacing:0.05em;
+  transition:opacity 0.15s;pointer-events:none;
+  z-index:2;
+}
+.player-card:hover .card-flip-hint{opacity:0.5;}
+
+/* Make .player-card a positioning context for the two faces */
+.player-card{position:relative;min-height:70px;}
+
+/* ── Map win-rate strip ── */
+.map-winrate{
+  padding:0.9rem 1.25rem 0.75rem;
+  border-bottom:1px solid var(--af-border);
+}
+.mwr-title{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--af-muted);letter-spacing:0.18em;text-transform:uppercase;
+  margin-bottom:0.65rem;
+}
+.mwr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:0.4rem;}
+.mwr-cell{
+  background:rgba(0,0,0,0.2);
+  border:0.5px solid var(--af-border);
+  padding:0.45rem 0.6rem;
+}
+.mwr-map-name{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  letter-spacing:0.06em;text-transform:uppercase;color:var(--af-text);
+  margin-bottom:0.3rem;
+}
+.mwr-bar-track{height:3px;background:var(--af-border);border-radius:2px;overflow:hidden;margin-bottom:0.25rem;}
+.mwr-bar-fill{height:100%;border-radius:2px;transition:width 0.8s ease;}
+.mwr-record{font-family:'Share Tech Mono',monospace;font-size:8px;color:var(--af-muted);letter-spacing:0.06em;}
+.mwr-record .w{color:var(--af-win);}
+.mwr-record .l{color:var(--af-loss);}
+
+/* ── Season sealed flash ── */
+@keyframes sealedFlash{
+  0%{opacity:0;}15%{opacity:1;}85%{opacity:1;}100%{opacity:0;}
+}
+#sealed-overlay{
+  position:fixed;inset:0;z-index:7000;pointer-events:none;
+  background:radial-gradient(ellipse at center, rgba(201,168,76,0.18) 0%, transparent 70%);
+  opacity:0;
+}
+#sealed-overlay.active{animation:sealedFlash 1.8s ease forwards;}
+#sealed-particles{position:fixed;inset:0;z-index:7001;pointer-events:none;}
+
+/* ── Flip toggle button on cards ── */
+.card-flip-btn{
+  position:absolute;bottom:4px;right:4px;
+  width:18px;height:18px;
+  background:rgba(46,44,40,0.8);
+  border:0.5px solid var(--af-border);
+  color:var(--af-muted);font-size:11px;
+  cursor:pointer;z-index:3;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity 0.15s;
+  padding:0;line-height:1;
+}
+.player-card:hover .card-flip-btn{opacity:1;}
+.card-flip-btn:hover{color:var(--af-orange);border-color:var(--af-orange);}
+
+/* ── Next match countdown ── */
+.countdown-strip{
+  background:linear-gradient(90deg,rgba(232,98,26,0.08),rgba(232,98,26,0.04),transparent);
+  border-bottom:1px solid rgba(232,98,26,0.2);
+  padding:0.6rem 2rem;
+  display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;
+}
+.cd-label{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--af-orange);letter-spacing:0.18em;text-transform:uppercase;
+  flex-shrink:0;
+}
+.cd-match{
+  font-family:'Share Tech Mono',monospace;font-size:10px;
+  color:var(--af-text);letter-spacing:0.08em;flex:1;min-width:0;
+}
+.cd-match span{color:var(--af-muted);}
+.cd-timer{
+  display:flex;gap:0.5rem;align-items:center;flex-shrink:0;
+}
+.cd-unit{text-align:center;}
+.cd-num{
+  font-family:'Bebas Neue',sans-serif;font-size:22px;
+  color:var(--af-orange);line-height:1;letter-spacing:0.04em;
+  min-width:28px;display:block;
+}
+.cd-unit-lbl{
+  font-family:'Share Tech Mono',monospace;font-size:8px;
+  color:var(--af-muted);letter-spacing:0.1em;text-transform:uppercase;
+}
+.cd-sep{
+  font-family:'Bebas Neue',sans-serif;font-size:20px;
+  color:var(--af-orange);opacity:0.4;margin-top:-4px;
+}
+.cd-live{
+  font-family:'Share Tech Mono',monospace;font-size:10px;
+  color:var(--af-win);letter-spacing:0.1em;
+  animation:pulse 1s infinite;
+}
+@media(max-width:600px){
+  .countdown-strip{padding:0.6rem 1.5rem;gap:0.75rem;}
+  .cd-match{display:none;}
+}
+
+/* ── Recruitment status banner ── */
+.recruit-banner{
+  display:flex;align-items:center;gap:0.75rem;
+  padding:0.5rem 2rem;
+  background:rgba(58,224,122,0.05);
+  border-bottom:1px solid rgba(58,224,122,0.2);
+  flex-wrap:wrap;
+}
+.recruit-banner.locked{background:rgba(232,98,26,0.05);border-bottom-color:rgba(232,98,26,0.2);}
+.rb-dot{width:7px;height:7px;border-radius:50%;background:var(--af-win);flex-shrink:0;animation:pulse 2s infinite;}
+.recruit-banner.locked .rb-dot{background:var(--af-orange);animation:none;}
+.rb-text{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:0.12em;color:var(--af-text);}
+.rb-text strong{color:var(--af-win);}
+.recruit-banner.locked .rb-text strong{color:var(--af-orange);}
+.rb-dismiss{
+  margin-left:auto;font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--af-muted);background:none;border:none;cursor:pointer;
+  letter-spacing:0.1em;padding:0;
+}
+.rb-dismiss:hover{color:var(--af-text);}
+
+/* ── About section ── */
+.about-section{
+  padding:0.9rem 2rem;
+  border-bottom:1px solid var(--af-border);
+  display:grid;grid-template-columns:1fr auto;gap:1.25rem;align-items:center;
+}
+.about-text{font-size:12.5px;line-height:1.6;color:var(--af-text);opacity:0.82;}
+.about-text p{margin-bottom:0;}
+.about-highlights{display:flex;flex-direction:row;gap:0.4rem;flex-shrink:0;flex-wrap:wrap;justify-content:flex-end;}
+.about-pill{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  letter-spacing:0.1em;padding:4px 10px;
+  border:0.5px solid var(--af-border);color:var(--af-muted);
+  white-space:nowrap;text-align:center;
+}
+.about-pill.gold{border-color:var(--af-gold-dim);color:var(--af-gold);background:rgba(201,168,76,0.06);}
+.about-pill.orange{border-color:rgba(232,98,26,0.3);color:var(--af-orange);background:rgba(232,98,26,0.05);}
+
+/* ── Contact / sponsor section ── */
+.contact-section{
+  padding:1.25rem 2rem;
+  border-top:1px solid var(--af-border);
+  display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;
+}
+.contact-label{
+  font-family:'Share Tech Mono',monospace;font-size:10px;
+  color:var(--af-muted);letter-spacing:0.15em;text-transform:uppercase;
+  flex-shrink:0;
+}
+.contact-item{
+  display:flex;align-items:center;gap:0.5rem;
+  font-family:'Share Tech Mono',monospace;font-size:10px;
+  color:var(--af-text);letter-spacing:0.08em;
+}
+.contact-item svg{width:12px;height:12px;fill:currentColor;flex-shrink:0;color:var(--af-muted);}
+.contact-badge{
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--af-gold);border:0.5px solid var(--af-gold-dim);
+  padding:2px 8px;letter-spacing:0.08em;background:rgba(201,168,76,0.06);
+}
+
+/* ── AF official link ── */
+.af-link{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:'Share Tech Mono',monospace;font-size:9px;
+  color:var(--af-muted);text-decoration:none;
+  border:0.5px solid var(--af-border);padding:2px 8px;
+  letter-spacing:0.09em;transition:all 0.15s;
+}
+.af-link:hover{color:var(--af-orange);border-color:var(--af-orange);}
+
+/* ── Mobile audit fixes ── */
+@media(max-width:600px){
+  .about-section{grid-template-columns:1fr;gap:1rem;}
+  .about-highlights{flex-direction:row;flex-wrap:wrap;}
+  .contact-section{gap:0.75rem;}
+  .recruit-banner{padding:0.5rem 1.5rem;}
+  .countdown-strip{padding:0.55rem 1.5rem;gap:0.75rem;}
+  .cd-num{font-size:18px;}
+  .header{padding:1.25rem 1.5rem;}
+  .stat-cluster{gap:0.85rem;}
+  .stat-val{font-size:24px;}
+  .stat-val.wl{font-size:16px;}
+  .section-title{font-size:19px;}
+  .round-row{grid-template-columns:40px 1fr auto;gap:0.4rem;padding:0.5rem 0.9rem;}
+  .rr-score{font-size:14px;min-width:32px;}
+  .map-pill{display:none;}
+  .mwr-grid{grid-template-columns:repeat(auto-fill,minmax(85px,1fr));}
+  .gf-header{padding:0.75rem 1rem;}
+  .gf-opp{font-size:14px;}
+  .discord-section{padding:0 1.5rem 1.5rem;}
+  .share-bar{padding:0.75rem 1.5rem;}
+  .social-bar{padding:0.75rem 1.5rem;}
+  .footer{padding:0.9rem 1.5rem;}
+  .streak-row{max-width:120px;}
+}
+@media(max-width:400px){
+  .team-name{font-size:32px;}
+  .stat-cluster{gap:0.6rem;}
+  .about-highlights{display:none;}
+  .cd-match{display:none;}
+}
+
+/* ── Logs.tf link on card back ── */
+.cfb-logs-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  font-family:'Share Tech Mono',monospace;font-size:8px;
+  color:var(--af-muted);text-decoration:none;
+  border:0.5px solid var(--af-border);padding:2px 7px;
+  letter-spacing:0.08em;transition:all 0.12s;
+  margin-top:auto;
+}
+.cfb-logs-btn:hover{color:var(--af-orange);border-color:var(--af-orange);}
+</style>
+</head>
+<body>
+
+<!-- Player profile modal -->
+<div class="profile-overlay" id="profileOverlay" onclick="if(event.target===this)closeProfile()">
+  <div class="profile-modal" id="profileModal">
+    <button class="pm-close" onclick="closeProfile()">✕ CLOSE</button>
+    <div class="pm-header">
+      <img class="pm-avatar-large" id="pmAvatar" src="" alt="" onerror="this.style.display='none';document.getElementById('pmAvatarIcon').style.display='flex'">
+      <div class="pm-avatar-icon" id="pmAvatarIcon" style="display:none"></div>
+      <div class="pm-head-info">
+        <div class="pm-head-name" id="pmName"></div>
+        <div class="pm-head-class" id="pmClass"></div>
+        <div class="pm-head-country">
+          <img id="pmFlag" src="" alt="">
+          <span id="pmCountry"></span>
+        </div>
+      </div>
+    </div>
+    <div class="pm-body" id="pmBody"></div>
+    <div class="pm-footer" id="pmFooter"></div>
+  </div>
+</div>
+
+<!-- Share card overlay -->
+<div class="share-card-overlay" id="shareOverlay">
+  <div class="share-card">
+    <button class="share-card-close" onclick="document.getElementById('shareOverlay').classList.remove('visible')">✕ CLOSE</button>
+    <div class="sc-title"><span>Austr</span>asia</div>
+    <div class="sc-badge">🥇 AF WINTER 2024 CHAMPIONS</div>
+    <div class="sc-stat-row">
+      <div class="sc-stat"><div class="sc-stat-val">1</div><div class="sc-stat-lbl">Title</div></div>
+      <div class="sc-stat"><div class="sc-stat-val">9</div><div class="sc-stat-lbl">Core</div></div>
+      <div class="sc-stat"><div class="sc-stat-val">5</div><div class="sc-stat-lbl">Nations</div></div>
+      <div class="sc-stat"><div class="sc-stat-val">2024</div><div class="sc-stat-lbl">Est.</div></div>
+    </div>
+    <div class="sc-flags">
+      <img src="https://flagcdn.com/w40/sg.png" alt="SG">
+      <img src="https://flagcdn.com/w40/th.png" alt="TH">
+      <img src="https://flagcdn.com/w40/my.png" alt="MY">
+      <img src="https://flagcdn.com/w40/tw.png" alt="TW">
+      <img src="https://flagcdn.com/w40/au.png" alt="AU">
+    </div>
+    <div class="sc-footer-text">ASIAFORTRESS // HIGHLANDER DIVISION // EST. JAN 2024</div>
+    <div class="sc-actions">
+      <button class="sc-action-btn" id="copyLinkBtn" onclick="copyPageLink()">📋 COPY LINK</button>
+      <button class="sc-action-btn primary" onclick="window.print()">🖨 PRINT</button>
+    </div>
+  </div>
+</div>
+
+<div id="page-progress"></div>
+<canvas id="confetti-canvas"></canvas>
+<canvas id="particles-canvas"></canvas>
+<div id="sealed-overlay"></div>
+<canvas id="sealed-particles"></canvas>
+<div class="page">
+  <div class="scanlines"></div>
+  <div class="content">
+
+    <!-- Trophy ribbon -->
+    <div class="trophy-banner">
+      <div class="marquee-track">
+        <span>🥇 AF WINTER 2024 CHAMPIONS</span><span>&nbsp;·&nbsp;</span>
+        <span>🥇 AF WINTER 2024 CHAMPIONS</span><span>&nbsp;·&nbsp;</span>
+        <span>🥇 AF WINTER 2024 CHAMPIONS</span><span>&nbsp;·&nbsp;</span>
+        <span>🥇 AF WINTER 2024 CHAMPIONS</span><span>&nbsp;·&nbsp;</span>
+        <span>🥇 AF WINTER 2024 CHAMPIONS</span><span>&nbsp;·&nbsp;</span>
+        <span>🥇 AF WINTER 2024 CHAMPIONS</span><span>&nbsp;·&nbsp;</span>
+      </div>
+    </div>
+
+
+    <!-- Recruitment status banner -->
+    <div class="recruit-banner locked" id="recruitBanner">
+      <div class="rb-dot"></div>
+      <div class="rb-text"><strong>Roster locked</strong> · Competing in AF Summer 2026 · Our Discord is open to everyone — come say hi!</div>
+      <button class="rb-dismiss" onclick="document.getElementById('recruitBanner').style.display='none'">✕</button>
+    </div>
+
+
+    <!-- Next match countdown -->
+    <div class="countdown-strip" id="countdownStrip">
+      <div class="cd-label">Next Match</div>
+      <div class="cd-match">AF Summer 2026 <span>·</span> Qualifier Round 1 <span>·</span> 6 Jun · 8:30 PM</div>
+      <div class="cd-timer" id="cdTimer">
+        <div class="cd-unit"><span class="cd-num" id="cd-d">--</span><div class="cd-unit-lbl">Days</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cd-h">--</span><div class="cd-unit-lbl">Hrs</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cd-m">--</span><div class="cd-unit-lbl">Min</div></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span class="cd-num" id="cd-s">--</span><div class="cd-unit-lbl">Sec</div></div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <!-- Redesigned logo: clean concentric hex + bold A -->
+      <div style="flex-shrink:0;" id="mainLogo">
+        <svg width="88" height="88" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1c1a17"/>
+              <stop offset="100%" style="stop-color:#0e0d0c"/>
+            </linearGradient>
+            <filter id="glowOrange" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="1.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- Outer hex fill -->
+          <polygon points="44,4 80,24 80,64 44,84 8,64 8,24" fill="url(#hexGrad)"/>
+          <!-- Outer hex border - thick -->
+          <polygon points="44,4 80,24 80,64 44,84 8,64 8,24" fill="none" stroke="#E8621A" stroke-width="2.5" filter="url(#glowOrange)"/>
+          <!-- Mid hex - subtle inner ring -->
+          <polygon points="44,16 69,30 69,58 44,72 19,58 19,30" fill="none" stroke="#2a2824" stroke-width="1"/>
+          <!-- Inner hex - very subtle -->
+          <polygon points="44,24 62,34 62,54 44,64 26,54 26,34" fill="none" stroke="#222018" stroke-width="0.75"/>
+          <!-- The A - large, confident, centered -->
+          <text x="44" y="52" font-family="'Bebas Neue',Impact,sans-serif" font-size="40" fill="#E8621A" text-anchor="middle" dominant-baseline="middle" letter-spacing="1" filter="url(#glowOrange)">A</text>
+
+          <!-- 6 clean vertex dots -->
+          <circle cx="44" cy="4"  r="3" fill="#E8621A"/>
+          <circle cx="80" cy="24" r="3" fill="#E8621A"/>
+          <circle cx="80" cy="64" r="3" fill="#E8621A"/>
+          <circle cx="44" cy="84" r="3" fill="#E8621A"/>
+          <circle cx="8"  cy="64" r="3" fill="#E8621A"/>
+          <circle cx="8"  cy="24" r="3" fill="#E8621A"/>
+          <!-- Midpoint tick marks on each edge -->
+          <line x1="62" y1="14" x2="65" y2="16"   stroke="#E8621A" stroke-width="1.2" opacity="0.6"/>
+          <line x1="26" y1="14" x2="23" y2="16"   stroke="#E8621A" stroke-width="1.2" opacity="0.6"/>
+          <line x1="62" y1="74" x2="65" y2="72"   stroke="#E8621A" stroke-width="1.2" opacity="0.6"/>
+          <line x1="26" y1="74" x2="23" y2="72"   stroke="#E8621A" stroke-width="1.2" opacity="0.6"/>
+          <line x1="8"  y1="44" x2="11" y2="44"   stroke="#E8621A" stroke-width="1.2" opacity="0.6"/>
+          <line x1="80" y1="44" x2="77" y2="44"   stroke="#E8621A" stroke-width="1.2" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="logo-block">
+        <div class="tag">AsiaFortress // Team Profile</div>
+        <div class="team-name"><span>Austr</span>asia</div>
+        <div class="format-badge">Highlander · 9v9</div>
+      </div>
+      <div class="stat-cluster">
+        <div class="stat"><div class="stat-val" data-count="1" id="stat-titles">0</div><div class="stat-lbl">Titles</div></div>
+        <div class="stat"><div class="stat-val wl">13W–2L</div><div class="stat-lbl">Record</div></div>
+        <div class="stat"><div class="stat-val" data-count="9" id="stat-core">0</div><div class="stat-lbl">Core</div></div>
+        <div class="stat"><div class="stat-val" data-count="6" id="stat-subs">0</div><div class="stat-lbl">Subs</div></div>
+        <div class="stat">
+          <div class="stat-val" style="font-size:13px;line-height:1.6;">🌏</div>
+          <div class="stat-lbl">Nations</div>
+          <div class="stat-flags">
+            <img src="https://flagcdn.com/w40/sg.png" alt="SG">
+            <img src="https://flagcdn.com/w40/th.png" alt="TH">
+            <img src="https://flagcdn.com/w40/my.png" alt="MY">
+            <img src="https://flagcdn.com/w40/tw.png" alt="TW">
+            <img src="https://flagcdn.com/w40/au.png" alt="AU">
+          </div>
+        </div>
+        <div class="stat"><div class="stat-val" style="font-size:14px;line-height:1.5;">JAN</div><div class="stat-lbl">Est. 2024</div></div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="about-section">
+      <div class="about-text">
+        <p>Austrasia is a competitive TF2 Highlander team co-founded in January 2024 by a group of players united by one goal: dominate the Asia region with the best talent the continent has to offer. Champions in their debut season. Now gunning for consecutive titles in Summer 2026.</p>
+      </div>
+      <div class="about-highlights">
+        <div class="about-pill gold">🥇 AF Winter 2024</div>
+        <div class="about-pill orange">Est. Jan 2024</div>
+        <div class="about-pill">5 Nations</div>
+        <a class="about-pill af-link" href="https://asiafortress.liquid.tf/leagues/7" target="_blank">↗ AF Official</a>
+      </div>
+    </div>
+
+
+    <!-- Active Roster -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Active Roster</div>
+        <div class="section-line"></div>
+      </div>
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn all-btn active" data-class="all">ALL</button>
+        <button class="filter-btn" data-class="scout">SCT</button>
+        <button class="filter-btn" data-class="soldier">SOL</button>
+        <button class="filter-btn" data-class="pyro">PYR</button>
+        <button class="filter-btn" data-class="demo">DEM</button>
+        <button class="filter-btn" data-class="heavy">HVY</button>
+        <button class="filter-btn" data-class="engi">ENG</button>
+        <button class="filter-btn" data-class="medic">MED</button>
+        <button class="filter-btn" data-class="sniper">SNP</button>
+        <button class="filter-btn" data-class="spy">SPY</button>
+      </div>
+      <div class="roster-grid" id="rosterMain">
+
+        <a class="player-card scout sg" href="https://steamcommunity.com/profiles/76561198261198393" target="_blank" data-player="kaldoz" data-logs="https://logs.tf/profile/76561198261198393" data-role="Scout" data-country="Singapore" data-flag="sg" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/profiles/76561198261198393">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/f4e7432889c3773c1f585f0f5ccf488fec760a5b_full.jpg" alt="kaldoz" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">SCT</div>
+            <div class="player-meta"><div class="player-class-label">Scout</div><div class="player-name-row"><div class="player-name">kaldoz</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/sg.png" alt="Singapore">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card soldier th" href="https://steamcommunity.com/id/SarkraZ/" target="_blank" data-player="sarkreez" data-role="Soldier" data-country="Thailand" data-flag="th" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/SarkraZ/">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/225d18ccde916592beecfeee3be231203254994e_full.jpg" alt="sarkreez" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">SOL</div>
+            <div class="player-meta"><div class="player-class-label">Soldier</div><div class="player-name-row"><div class="player-name">sarkreez</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card pyro sg" href="https://steamcommunity.com/id/HelloItsMeCH/" target="_blank" data-player="CH" data-logs="https://logs.tf/profile/76561198120797504" data-role="Pyro" data-country="Singapore" data-flag="sg" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/HelloItsMeCH/">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/34040edcf6c6070ba7876bb5966844670e5f60f1_full.jpg" alt="CH" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">PYR</div>
+            <div class="player-meta"><div class="player-class-label">Pyro</div><div class="player-name-row"><div class="player-name">CH</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/sg.png" alt="Singapore">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card demo my" href="https://steamcommunity.com/id/2rare4uez/" target="_blank" data-player="crs" data-logs="https://logs.tf/profile/76561198059315454" data-role="Demoman" data-country="Malaysia" data-flag="my" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/2rare4uez/">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/019e8abc56b5b16852b98b35f0d78ebab7800252_full.jpg" alt="crs" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">DEM</div>
+            <div class="player-meta"><div class="player-class-label">Demoman</div><div class="player-name-row"><div class="player-name">crs</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/my.png" alt="Malaysia">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card heavy tw" href="https://steamcommunity.com/id/Nebula0314/" target="_blank" data-player="Nebula" data-logs="https://logs.tf/profile/76561198126541023" data-role="Heavy" data-country="Taiwan" data-flag="tw" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/Nebula0314/">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/bae0e39ce0eb46d288ed5fa00aa8a66e3626fad6_full.jpg" alt="Nebula" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">HVY</div>
+            <div class="player-meta"><div class="player-class-label">Heavy</div><div class="player-name-row"><div class="player-name">Nebula</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/tw.png" alt="Taiwan">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card engi sg" href="https://steamcommunity.com/id/notsurge/" target="_blank" data-player="surge" data-logs="https://logs.tf/profile/76561198066262562" data-role="Engineer" data-country="Singapore" data-flag="sg" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/notsurge/">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/52059ef6d037fb118ef3784c0be01ad6ea7f39ca_full.jpg" alt="surge" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">ENG</div>
+            <div class="player-meta"><div class="player-class-label">Engineer</div><div class="player-name-row"><div class="player-name">surge</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/sg.png" alt="Singapore">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card medic sg" href="https://steamcommunity.com/id/effixion" target="_blank" data-player="effixion" data-role="Medic" data-country="Singapore" data-flag="sg" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/effixion">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/9ed59eb4422060bc4921727cf533e2331f72f9b8_full.jpg" alt="effixion" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">MED</div>
+            <div class="player-meta"><div class="player-class-label">Medic</div><div class="player-name-row"><div class="player-name">effixion</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/sg.png" alt="Singapore">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card sniper au" href="https://steamcommunity.com/profiles/76561198050517054/" target="_blank" data-player="mazz" data-logs="https://logs.tf/profile/76561198050517054" data-role="Sniper" data-country="Australia" data-flag="au" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/profiles/76561198050517054/" data-captain="true">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://i.imgur.com/K2ep4QU.jpg" alt="mazz" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">SNP</div>
+            <div class="player-meta"><div class="player-class-label">Sniper</div><div class="player-name-row"><div class="player-name">mazz</div><span class="captain-badge">CPT</span><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/au.png" alt="Australia">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card spy th" href="https://steamcommunity.com/id/typhon_GL/" target="_blank" data-player="zenny" data-role="Spy" data-country="Thailand" data-flag="th" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/typhon_GL/">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/72dfcf03facc36599be8545948970494ce0db241_full.jpg" alt="zenny" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">SPY</div>
+            <div class="player-meta"><div class="player-class-label">Spy</div><div class="player-name-row"><div class="player-name">zenny</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Substitutes -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Substitutes</div>
+        <div class="section-line"></div>
+      </div>
+      <div class="roster-grid" id="rosterSubs">
+
+        <a class="player-card demo sub my" href="https://steamcommunity.com/id/derpyspai/" target="_blank" data-player="error" data-role="Demo · Spy" data-country="Malaysia" data-flag="my" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/derpyspai/" data-sub="true">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/ef461de7d7737e49f4c4342228d323f396cb008f_full.jpg" alt="error" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">DEM</div>
+            <div class="player-meta"><div class="player-class-label">Demo · Spy <span class="sub-badge">SUB</span></div><div class="player-name-row"><div class="player-name">error</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/my.png" alt="Malaysia">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card scout sub tw" href="https://steamcommunity.com/id/76546416245641297/" target="_blank" data-player="Joe" data-role="Scout · Soldier" data-country="Taiwan" data-flag="tw" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/76546416245641297/" data-sub="true">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/a98ce782631382bd3bb9d462287a9625175ba9a7_full.jpg" alt="Joe" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">SCT</div>
+            <div class="player-meta"><div class="player-class-label">Scout · Soldier <span class="sub-badge">SUB</span></div><div class="player-name-row"><div class="player-name">Joe</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/tw.png" alt="Taiwan">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card scout sub th" href="https://steamcommunity.com/id/Corde8/" target="_blank" data-player="corde" data-role="Scout" data-country="Thailand" data-flag="th" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/Corde8/" data-sub="true">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/6bb40f8b529f8b70725d60d8462fbb4cacf538a1_full.jpg" alt="corde" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">SCT</div>
+            <div class="player-meta"><div class="player-class-label">Scout <span class="sub-badge">SUB</span></div><div class="player-name-row"><div class="player-name">corde</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card heavy sub th" href="https://steamcommunity.com/id/-rosss3s/" target="_blank" data-player="ross3s" data-role="Heavy" data-country="Thailand" data-flag="th" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/-rosss3s/" data-sub="true">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/57272560875de2e377776f801df8036da8380f31_full.jpg" alt="ross3s" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">HVY</div>
+            <div class="player-meta"><div class="player-class-label">Heavy <span class="sub-badge">SUB</span></div><div class="player-name-row"><div class="player-name">ross3s</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card flex sub th" href="https://steamcommunity.com/profiles/76561198066262562/" target="_blank" data-player="Luv" data-logs="https://logs.tf/profile/76561198066262562" data-role="Flex" data-country="Thailand" data-flag="th" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/profiles/76561198066262562/" data-sub="true">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/76938a1e2309d802ecc00d95d7026948929d4fb8_full.jpg" alt="Luv" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">ALL</div>
+            <div class="player-meta"><div class="player-class-label">Flex <span class="sub-badge">SUB</span></div><div class="player-name-row"><div class="player-name">Luv</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+        <a class="player-card pyro sub th" href="https://steamcommunity.com/id/PD0RA" target="_blank" data-player="PDORA" data-role="Pyro" data-country="Thailand" data-flag="th" data-since="Jan 2024" data-status="active" data-steam="https://steamcommunity.com/id/PD0RA" data-sub="true">
+          <div class="country-bar"></div><div class="card-inner">
+            <img class="player-avatar" src="https://avatars.fastly.steamstatic.com/e3f58edcad509ec137cd6d6986374c0f66b052f2_full.jpg" alt="PDORA" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="class-icon" style="display:none">PYR</div>
+            <div class="player-meta"><div class="player-class-label">Pyro <span class="sub-badge">SUB</span></div><div class="player-name-row"><div class="player-name">PDORA</div><div class="active-dot"></div></div></div>
+            <img class="flag-img" src="https://flagcdn.com/w40/th.png" alt="Thailand">
+          </div><div class="tooltip">↗ VIEW STEAM PROFILE</div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <div class="divider"></div>
+
+    <!-- ══ SEASON HISTORY ══ -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title">Season History</div>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="season-accordion">
+
+        <!-- ── AF Winter 2024 ── -->
+        <details class="season-block">
+          <summary>
+            <div class="sb-trophy">🏆</div><div class="sb-season-name">AF Winter 2024</div>
+            <div class="streak-row" title="Round results R1–R15 + Playoffs: W=Win L=Loss B=Bye">
+              <div class="streak-dot w"></div>
+              <div class="streak-dot l"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot b"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot l"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+              <div class="streak-dot w"></div>
+            </div>
+            <div class="sb-record">13W · 2L</div>
+            <div class="sb-outcome">🥇 Champions</div>
+            <a class="jump-playoffs" href="#playoffs-anchor" onclick="document.querySelector('details.season-block').setAttribute('open','');event.stopPropagation();">▶ Playoffs</a>
+            <div class="sb-chevron">▼</div>
+          </summary>
+          <div class="season-progress" title="Round record: 13W · 2L · 1 Bye">
+            <div class="sp-seg w"></div><div class="sp-seg l"></div><div class="sp-seg w"></div>
+            <div class="sp-seg w"></div><div class="sp-seg w"></div><div class="sp-seg w"></div>
+            <div class="sp-seg w"></div><div class="sp-seg b"></div><div class="sp-seg w"></div>
+            <div class="sp-seg w"></div><div class="sp-seg w"></div><div class="sp-seg w"></div>
+            <div class="sp-seg l"></div><div class="sp-seg w"></div><div class="sp-seg w"></div>
+            <div class="sp-seg w"></div><div class="sp-seg w"></div><div class="sp-seg w"></div>
+          </div>
+          <div class="season-body"><div class="season-body-inner">
+
+            <!-- Regular Season -->
+
+            <!-- Map win-rate strip -->
+            <div class="map-winrate">
+              <div class="mwr-title">Map Record — AF Winter 2024</div>
+              <div class="mwr-grid" id="mapWinrateGrid">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <div class="phase-header">
+              <div class="phase-header-title">Regular Season</div>
+              <div class="phase-header-line"></div>
+            </div>
+
+            <div class="round-row win">
+              <div class="rr-num">Round 1</div>
+              <div class="rr-opp">Chill Time <span class="rr-map">Swiftwater</span><span class="map-pill map-swiftwater">SWIFTWATER</span></div>
+              <div class="rr-score win">0–1 W</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3766361" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row loss">
+              <div class="rr-num">Round 2</div>
+              <div class="rr-opp">Ambulas: Reborn <span class="h2h-badge">H2H 3W–2L</span> <span class="rr-map">Product</span><span class="map-pill map-product">PRODUCT</span></div>
+              <div class="rr-score loss">0–3 L</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3766382" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row win">
+              <div class="rr-num">Round 3</div>
+              <div class="rr-opp">Muggles on a Train <span class="rr-map">Upward</span><span class="map-pill map-upward">UPWARD</span></div>
+              <div class="rr-score win">1–0 W</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3766962" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row win">
+              <div class="rr-num">Round 4</div>
+              <div class="rr-opp">ottr <span class="h2h-badge">H2H 3W–0L</span> <span class="rr-map">Ashville</span><span class="map-pill map-ashville">ASHVILLE</span></div>
+              <div class="rr-score win">3–0 W</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3766974" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row win">
+              <div class="rr-num">Round 5</div>
+              <div class="rr-opp">yagadas <span class="h2h-badge">H2H 5W–0L</span> <span class="rr-map">Vigil</span><span class="map-pill map-vigil">VIGIL</span></div>
+              <div class="rr-score win">0–1 W</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3769756" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row win">
+              <div class="rr-num">Round 6</div>
+              <div class="rr-opp">ze yappers <span class="rr-map">Proot</span><span class="map-pill map-proot">PROOT</span></div>
+              <div class="rr-score win">3–0 W</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3769771" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row win">
+              <div class="rr-num">Round 7</div>
+              <div class="rr-opp">Pallet Town <span class="rr-map">Upward</span><span class="map-pill map-upward">UPWARD</span></div>
+              <div class="rr-score win">1–0 W</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3769771" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row bye">
+              <div class="rr-num">Round 8</div>
+              <div class="rr-opp" style="color:var(--af-muted);">— BYE —</div>
+              <div class="rr-score neutral">BYE</div>
+              <div class="rr-logs"></div>
+            </div>
+            <div class="round-row win">
+              <div class="rr-num">Round 9</div>
+              <div class="rr-opp">Ambulas: Reborn <span class="h2h-badge">H2H 3W–2L</span> <span class="rr-map">Swiftwater</span><span class="map-pill map-swiftwater">SWIFTWATER</span></div>
+              <div class="rr-score win">1–0 W</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3773148" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row win">
+              <div class="rr-num">Round 10</div>
+              <div class="rr-opp">Chinese Confederation <span class="rr-map">Proot</span><span class="map-pill map-proot">PROOT</span></div>
+              <div class="rr-score win">3–0 W</div>
+              <div class="rr-logs"><a class="rr-log" href="https://logs.tf/3773166" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a></div>
+            </div>
+            <div class="round-row ff">
+              <div class="rr-num">Round 11</div>
+              <div class="rr-opp">yagadas <span class="rr-map" style="color:var(--af-win);opacity:0.7;">Forfeit Win</span></div>
+              <div class="rr-score win">W</div>
+              <div class="rr-logs"></div>
+            </div>
+            <div class="round-row ff">
+              <div class="rr-num">Round 12</div>
+              <div class="rr-opp">ottr <span class="rr-map" style="color:var(--af-win);opacity:0.7;">Forfeit Win</span></div>
+              <div class="rr-score win">W</div>
+              <div class="rr-logs"></div>
+            </div>
+
+            <!-- R13 multi-match loss -->
+            <div class="round-multi loss-multi">
+              <div class="rr-multi-header">
+                <div class="rr-num">Round 13</div>
+                <div class="rr-opp">Ambulas: Reborn <span class="h2h-badge">H2H 3W–2L</span> <span class="rr-map">2 matches</span><span class="map-pill map-swiftwater">2 MATCHES</span> <span class="rr-multi-label">▾</span></div>
+                <div class="rr-score loss" style="font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--af-loss);">0–2 L</div>
+                <div></div>
+              </div>
+              <div class="rr-sub-matches">
+                <div class="rr-sub-match">
+                  <div class="rsm-map">Product</div><span class="map-pill map-product">PRODUCT</span>
+                  <div class="rsm-score loss">3–0 L</div>
+                  <a class="rr-log" href="https://logs.tf/3779299" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+                </div>
+                <div class="rr-sub-match">
+                  <div class="rsm-map">Vigil</div><span class="map-pill map-vigil">VIGIL</span>
+                  <div class="rsm-score loss">2–0 L</div>
+                  <a class="rr-log" href="https://logs.tf/3779317" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- R14 multi-match win -->
+            <div class="round-multi">
+              <div class="rr-multi-header">
+                <div class="rr-num">Round 14</div>
+                <div class="rr-opp">yagadas <span class="h2h-badge">H2H 5W–0L</span> <span class="rr-map">3 matches</span><span class="map-pill map-swiftwater">3 MATCHES</span> <span class="rr-multi-label">▾</span></div>
+                <div class="rr-score win" style="font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--af-win);">3–0 W</div>
+                <div></div>
+              </div>
+              <div class="rr-sub-matches">
+                <div class="rr-sub-match">
+                  <div class="rsm-map">Match 1</div><span class="map-pill map-product">MATCH 1</span>
+                  <div class="rsm-score win">2–0 W</div>
+                  <a class="rr-log" href="https://logs.tf/3783217" target="_blank" data-tip="View match stats on logs.tf ↗">LOG 1</a>
+                </div>
+                <div class="rr-sub-match">
+                  <div class="rsm-map">Match 2</div><span class="map-pill map-product">MATCH 2</span>
+                  <div class="rsm-score win">2–0 W</div>
+                  <a class="rr-log" href="https://logs.tf/3783225" target="_blank" data-tip="View match stats on logs.tf ↗">LOG 2</a>
+                </div>
+                <div class="rr-sub-match">
+                  <div class="rsm-map">Match 3</div><span class="map-pill map-product">MATCH 3</span>
+                  <div class="rsm-score win">3–0 W</div>
+                  <a class="rr-log" href="https://logs.tf/3783230" target="_blank" data-tip="View match stats on logs.tf ↗">LOG 3</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- R15 multi-match win -->
+            <div class="round-multi">
+              <div class="rr-multi-header">
+                <div class="rr-num">Round 15</div>
+                <div class="rr-opp">yagadas <span class="h2h-badge">H2H 5W–0L</span> <span class="rr-map">2 matches</span><span class="map-pill map-swiftwater">2 MATCHES</span> <span class="rr-multi-label">▾</span></div>
+                <div class="rr-score win" style="font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--af-win);">2–0 W</div>
+                <div></div>
+              </div>
+              <div class="rr-sub-matches">
+                <div class="rr-sub-match">
+                  <div class="rsm-map">Vigil</div><span class="map-pill map-vigil">VIGIL</span>
+                  <div class="rsm-score win">2–0 W</div>
+                  <a class="rr-log" href="https://logs.tf/3787135" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+                </div>
+                <div class="rr-sub-match">
+                  <div class="rsm-map">Product</div><span class="map-pill map-product">PRODUCT</span>
+                  <div class="rsm-score win">3–0 W</div>
+                  <a class="rr-log" href="https://logs.tf/3787140" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Playoffs -->
+            <div id="playoffs-anchor" class="phase-header playoffs">
+              <div class="phase-header-title">Playoffs</div>
+              <div class="phase-header-line"></div>
+            </div>
+
+            <!-- Playoffs R2 -->
+            <div class="playoff-card">
+              <div class="playoff-card-header">
+                <div class="pc-stage">Playoffs · Round 2</div>
+                <div class="pc-opp">yagadas</div>
+                <div class="pc-result">WIN</div>
+              </div>
+              <div class="playoff-match-row">
+                <div class="pm-map">Ashville</div><span class="map-pill map-ashville">ASHVILLE</span>
+                <div class="pm-score win">3–2 W</div>
+                <a class="pm-log" href="https://logs.tf/3791151" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+              </div>
+              <div class="playoff-match-row">
+                <div class="pm-map">Upward</div><span class="map-pill map-upward">UPWARD</span>
+                <div class="pm-score win">2–1 W</div>
+                <a class="pm-log" href="https://logs.tf/3791171" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+              </div>
+            </div>
+
+            <!-- Semi Final -->
+            <div class="playoff-card" style="margin-top:0.6rem;">
+              <div class="playoff-card-header">
+                <div class="pc-stage">Semi Final</div>
+                <div class="pc-opp">ottr</div>
+                <div class="pc-result">WIN · CLEAN SWEEP</div>
+              </div>
+              <div class="playoff-match-row">
+                <div class="pm-map">Product</div><span class="map-pill map-product">PRODUCT</span>
+                <div class="pm-score win">3–0 W</div>
+                <a class="pm-log" href="https://logs.tf/3800050" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+              </div>
+              <div class="playoff-match-row">
+                <div class="pm-map">Ashville</div><span class="map-pill map-ashville">ASHVILLE</span>
+                <div class="pm-score win">3–0 W</div>
+                <a class="pm-log" href="https://logs.tf/3800049" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+              </div>
+            </div>
+
+
+            <!-- GF highlight quote -->
+            <div class="gf-quote">
+              <div class="gf-quote-text">"Clinched on Product 3–2 in the closest match of the season — then swept Steel to seal the championship. A debut season no one will forget."</div>
+              <div class="gf-quote-attr">— AF Winter 2024 Grand Final · vs Ambulas: Reborn</div>
+            </div>
+
+            <!-- Grand Final -->
+            <div class="grand-final-card">
+              <div class="gf-crown">👑</div>
+              <div class="gf-header">
+                <div class="gf-badge">Grand Final</div>
+                <div class="gf-opp">Ambulas: Reborn</div>
+                <div class="gf-result">🥇 CHAMPIONS</div>
+              </div>
+              <div class="gf-match-row">
+                <div class="gf-map">Product</div><span class="map-pill map-product">PRODUCT</span>
+                <div class="gf-score">3–2 W</div>
+                <a class="gf-log" href="https://logs.tf/3808368" target="_blank" data-tip="View match stats on logs.tf ↗">LOGS</a>
+              </div>
+              <div class="gf-match-row">
+                <div class="gf-map">Steel</div><span class="map-pill map-steel">STEEL</span>
+                <div class="gf-score">2–0 W</div>
+                <a class="gf-log" href="https://logs.tf/3808377" target="_blank" data-tip="View match stats on logs.tf ↗">LOG 1</a>
+              </div>
+              <div class="gf-match-row">
+                <div class="gf-map">Steel (cont.)</div><span class="map-pill map-steel">STEEL ↩</span>
+                <div class="gf-score">2–0 W</div>
+                <a class="gf-log" href="https://logs.tf/3808380" target="_blank" data-tip="View match stats on logs.tf ↗">LOG 2</a>
+              </div>
+              <div class="gf-combined-row">
+                <div class="gf-combined-lbl">COMBINED:</div>
+                <a class="gf-combined-link" href="https://logs.tf/3808411" target="_blank">📋 FULL GRAND FINAL LOGS</a>
+              </div>
+            </div>
+
+          </div></div><!-- /season-body-inner /season-body -->
+        </details>
+
+        <!-- ── AF Summer 2026 (upcoming) ── -->
+        <details class="season-block upcoming">
+          <summary>
+            <div class="sb-season-name">AF Summer 2026</div>
+            <div class="sb-record">—</div>
+            <div class="sb-outcome tbd">Upcoming</div>
+            <div class="sb-chevron" style="opacity:0;">▼</div>
+          </summary>
+        </details>
+
+      </div>
+    </div>
+
+    <!-- Discord embed -->
+    <div class="discord-section">
+      <a class="discord-card" href="https://discord.gg/Chq66whta" target="_blank">
+        <div class="discord-logo">
+          <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.031.052a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+        </div>
+        <div class="discord-info">
+          <div class="discord-server-name">Austrasia Discord</div>
+          <div class="discord-desc">ASIAFORTRESS HIGHLANDER · Team Server · Everyone welcome</div>
+          <div class="discord-meta">
+            <div class="discord-pill online">● OPEN</div>
+            <div class="discord-pill">discord.gg/Chq66whta</div>
+          </div>
+        </div>
+        <button class="discord-join-btn" onclick="event.preventDefault();window.open('https://discord.gg/Chq66whta','_blank')">JOIN</button>
+      </a>
+    </div>
+
+    <!-- Contact / Sponsor -->
+    <div class="contact-section">
+      <div class="contact-label">Contact</div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.031.052a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+        mazz (captain)
+      </div>
+      <div class="contact-badge">harry.tf</div>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:0.5rem;">
+        <a class="af-link" href="https://asiafortress.liquid.tf/leagues/7" target="_blank">↗ AF LEAGUE PAGE</a>
+      </div>
+    </div>
+
+    <!-- Share bar -->
+    <div class="share-bar">
+      <button class="share-btn" id="copyLinkTopBtn" onclick="copyPageLink()">
+        <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        COPY LINK
+      </button>
+      <button class="share-btn" onclick="document.getElementById('shareOverlay').classList.add('visible')">
+        <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+        SHARE CARD
+      </button>
+    </div>
+
+    <!-- Social -->
+    <div class="social-bar">
+      <a class="social-link" href="https://steamcommunity.com/groups/austrasian" target="_blank">
+        <svg class="social-icon" viewBox="0 0 24 24"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0zM7.54 18.21l-1.473-.61c.262.543.714.999 1.314 1.25 1.297.539 2.793-.076 3.332-1.375.263-.63.264-1.319.005-1.949s-.75-1.121-1.377-1.383c-.624-.26-1.29-.249-1.878-.03l1.523.63c.956.4 1.409 1.497 1.009 2.452-.397.957-1.497 1.41-2.454 1.015zm11.415-9.303c0-1.662-1.353-3.015-3.015-3.015-1.661 0-3.015 1.353-3.015 3.015 0 1.663 1.354 3.015 3.015 3.015 1.663 0 3.015-1.352 3.015-3.015zm-5.273-.005c0-1.252 1.013-2.266 2.265-2.266 1.249 0 2.266 1.014 2.266 2.266 0 1.251-1.017 2.265-2.266 2.265-1.253 0-2.265-1.014-2.265-2.265z"/></svg>
+        STEAM GROUP
+      </a>
+      <a class="social-link" href="https://discord.gg/Chq66whta" target="_blank">
+        <svg class="social-icon" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.031.052a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+        DISCORD
+      </a>
+    </div>
+
+    <div class="footer">
+      <div class="footer-brand">ASIAFORTRESS // HIGHLANDER DIVISION</div>
+      <div class="footer-status"><div class="dot"></div>Season Active</div>
+      <div class="footer-updated" id="lastUpdated"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── Canvas OG image + favicon generator ──
+(function(){
+  const c = document.createElement('canvas');
+  c.width = 1200; c.height = 630;
+  const ctx = c.getContext('2d');
+
+  // Background
+  ctx.fillStyle = '#111110';
+  ctx.fillRect(0, 0, 1200, 630);
+
+  // Subtle scanlines
+  for(let y = 0; y < 630; y += 4){
+    ctx.fillStyle = 'rgba(0,0,0,0.08)';
+    ctx.fillRect(0, y+2, 1200, 2);
+  }
+
+  // Left orange accent bar
+  const barGrad = ctx.createLinearGradient(0,0,0,630);
+  barGrad.addColorStop(0,'#E8621A');
+  barGrad.addColorStop(1,'rgba(232,98,26,0.3)');
+  ctx.fillStyle = barGrad;
+  ctx.fillRect(0, 0, 6, 630);
+
+  // Gold top border
+  ctx.fillStyle = '#c9a84c';
+  ctx.fillRect(0, 0, 1200, 2);
+
+  // Draw hex logo (vector-style using canvas)
+  function hexPath(cx, cy, r, ctx){
+    ctx.beginPath();
+    for(let i=0;i<6;i++){
+      const a = Math.PI/180*(60*i - 90);
+      i===0 ? ctx.moveTo(cx+r*Math.cos(a), cy+r*Math.sin(a))
+             : ctx.lineTo(cx+r*Math.cos(a), cy+r*Math.sin(a));
+    }
+    ctx.closePath();
+  }
+  const lx = 160, ly = 315;
+  hexPath(lx, ly, 110, ctx); ctx.fillStyle = '#1c1a17'; ctx.fill();
+  hexPath(lx, ly, 110, ctx); ctx.strokeStyle = '#E8621A'; ctx.lineWidth = 5; ctx.stroke();
+  hexPath(lx, ly, 88, ctx);  ctx.strokeStyle = '#2a2824'; ctx.lineWidth = 2; ctx.stroke();
+  // A letter
+  ctx.fillStyle = '#E8621A';
+  ctx.font = 'bold 110px Impact, Arial Black, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('A', lx, ly + 5);
+  // underline
+  ctx.strokeStyle = '#E8621A'; ctx.lineWidth = 4;
+  ctx.beginPath(); ctx.moveTo(lx-40, ly+55); ctx.lineTo(lx+40, ly+55); ctx.stroke();
+  // corner dots
+  for(let i=0;i<6;i++){
+    const a = Math.PI/180*(60*i-90);
+    ctx.beginPath();
+    ctx.arc(lx+110*Math.cos(a), ly+110*Math.sin(a), 7, 0, Math.PI*2);
+    ctx.fillStyle = '#E8621A'; ctx.fill();
+  }
+
+  // Team name
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#E8621A';
+  ctx.font = 'bold 100px "Bebas Neue", Impact, sans-serif';
+  ctx.fillText('AUSTR', 310, 280);
+  ctx.fillStyle = '#e8e4d8';
+  ctx.fillText('ASIA', 310 + ctx.measureText('AUSTR').width, 280);
+
+  // Sub info
+  ctx.font = '28px monospace';
+  ctx.fillStyle = '#8a8474';
+  ctx.fillText('ASIAFORTRESS  ·  HIGHLANDER 9v9', 312, 335);
+
+  // Gold champion badge
+  ctx.fillStyle = 'rgba(201,168,76,0.12)';
+  ctx.strokeStyle = '#c9a84c';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.rect(310, 365, 560, 46);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#c9a84c';
+  ctx.font = 'bold 22px monospace';
+  ctx.textAlign = 'center';
+  ctx.fillText('🥇  AF WINTER 2024 CHAMPIONS', 590, 394);
+
+  // Stats row
+  const stats = [['1','TITLE'],['13W–3L','RECORD'],['9','CORE'],['5','NATIONS']];
+  ctx.textAlign = 'center';
+  stats.forEach((s,i) => {
+    const x = 310 + i*185 + 70;
+    ctx.fillStyle = '#c9a84c';
+    ctx.font = 'bold 48px "Bebas Neue", Impact, sans-serif';
+    ctx.fillText(s[0], x, 490);
+    ctx.fillStyle = '#8a8474';
+    ctx.font = '16px monospace';
+    ctx.fillText(s[1], x, 515);
+  });
+
+  // Bottom line
+  ctx.strokeStyle = '#E8621A';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(310, 545); ctx.lineTo(1150, 545); ctx.stroke();
+  ctx.fillStyle = '#8a8474';
+  ctx.font = '15px monospace';
+  ctx.textAlign = 'left';
+  ctx.fillText('SG · TH · MY · TW · AU   ·   EST. JAN 2024', 310, 570);
+
+  const ogUrl = c.toDataURL('image/png');
+  // Set OG image meta
+  const ogMeta = document.querySelector('meta[property="og:image"]');
+  if(ogMeta) ogMeta.setAttribute('content', ogUrl);
+  const twMeta = document.querySelector('meta[name="twitter:image"]') || (() => {
+    const m = document.createElement('meta'); m.name='twitter:image';
+    document.head.appendChild(m); return m;
+  })();
+  twMeta.content = ogUrl;
+
+  // Refined favicon — 64px, matches the cleaner SVG logo
+  const fc = document.createElement('canvas');
+  fc.width=64; fc.height=64;
+  const fctx = fc.getContext('2d');
+
+  // Dark background
+  fctx.fillStyle='#0e0d0c'; fctx.fillRect(0,0,64,64);
+
+  // Outer hex fill with gradient
+  const fg = fctx.createLinearGradient(8,8,56,56);
+  fg.addColorStop(0,'#1c1a17'); fg.addColorStop(1,'#0e0d0c');
+  hexPath(32,32,28,fctx); fctx.fillStyle=fg; fctx.fill();
+
+  // Outer hex border — glow effect via two strokes
+  hexPath(32,32,28,fctx);
+  fctx.strokeStyle='rgba(232,98,26,0.3)'; fctx.lineWidth=5; fctx.stroke();
+  hexPath(32,32,28,fctx);
+  fctx.strokeStyle='#E8621A'; fctx.lineWidth=2.5; fctx.stroke();
+
+  // Inner hex ring
+  hexPath(32,32,21,fctx);
+  fctx.strokeStyle='#2a2824'; fctx.lineWidth=1; fctx.stroke();
+
+  // 6 vertex dots
+  for(let i=0;i<6;i++){
+    const a=Math.PI/180*(60*i-90);
+    fctx.beginPath();
+    fctx.arc(32+28*Math.cos(a),32+28*Math.sin(a),2.2,0,Math.PI*2);
+    fctx.fillStyle='#E8621A'; fctx.fill();
+  }
+
+  // Bold A — slightly larger, perfectly centred
+  fctx.fillStyle='#E8621A';
+  fctx.font='700 30px "Bebas Neue",Impact,Arial Black,sans-serif';
+  fctx.textAlign='center'; fctx.textBaseline='middle';
+  fctx.fillText('A',32,33);
+
+  // Subtle underline
+  fctx.strokeStyle='rgba(232,98,26,0.7)'; fctx.lineWidth=1.5;
+  fctx.beginPath(); fctx.moveTo(22,42); fctx.lineTo(42,42); fctx.stroke();
+
+  const faviconLink = document.getElementById('faviconLink') || (() => {
+    const l=document.createElement('link'); l.rel='icon'; l.type='image/png';
+    document.head.appendChild(l); return l;
+  })();
+  faviconLink.href = fc.toDataURL('image/png');
+})();
+
+// Last updated
+(function(){
+  const d = new Date();
+  document.getElementById('lastUpdated').textContent = 'UPDATED ' + d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase();
+})();
+
+// ── Animated counter ──
+(function(){
+  const targets = [
+    {el: document.getElementById('stat-titles'), end: 1, duration: 600},
+    {el: document.getElementById('stat-core'),   end: 9, duration: 900},
+    {el: document.getElementById('stat-subs'),   end: 6, duration: 750},
+  ];
+  targets.forEach(({el, end, duration}) => {
+    if (!el) return;
+    let start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      const progress = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * end);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    // Delay slightly so animation plays after entrance fade
+    setTimeout(() => requestAnimationFrame(step), 400);
+  });
+})();
+
+// ── Class icon colours for profile modal ──
+const CLASS_COLORS = {
+  scout:   {bg:'#1d2e1a',color:'#5fc45c',abbr:'SCT'},
+  soldier: {bg:'#2e1e1a',color:'#e05c3a',abbr:'SOL'},
+  pyro:    {bg:'#2e221a',color:'#e07a3a',abbr:'PYR'},
+  demo:    {bg:'#1e1a2e',color:'#7a5ce0',abbr:'DEM'},
+  heavy:   {bg:'#2e1a1a',color:'#e03a3a',abbr:'HVY'},
+  engi:    {bg:'#2e2a1a',color:'#e0c03a',abbr:'ENG'},
+  medic:   {bg:'#1a2a2e',color:'#3ab8e0',abbr:'MED'},
+  sniper:  {bg:'#1a2e22',color:'#3ae07a',abbr:'SNP'},
+  spy:     {bg:'#281a2e',color:'#c03ae0',abbr:'SPY'},
+  flex:    {bg:'#1e1e1e',color:'#e8e4d8',abbr:'ALL'},
+};
+
+const FLAG_NAMES = {sg:'Singapore',th:'Thailand',my:'Malaysia',tw:'Taiwan',au:'Australia'};
+
+// ── Player profile modal ──
+function openProfile(card) {
+  const name    = card.dataset.player;
+  const role    = card.dataset.role;
+  const country = card.dataset.country;
+  const flag    = card.dataset.flag;
+  const since   = card.dataset.since;
+  const status  = card.dataset.status;
+  const steam   = card.dataset.steam;
+  const captain = card.dataset.captain === 'true';
+  const sub     = card.dataset.sub === 'true';
+
+  // Detect class from card classList
+  const classKey = [...card.classList].find(c => CLASS_COLORS[c]) || 'flex';
+  const cc = CLASS_COLORS[classKey] || CLASS_COLORS.flex;
+
+  // Avatar — copy from the card's loaded avatar img
+  const cardAvatar = card.querySelector('.player-avatar');
+  const pmAvatar   = document.getElementById('pmAvatar');
+  const pmAvatarIcon = document.getElementById('pmAvatarIcon');
+
+  if (cardAvatar && cardAvatar.src && !cardAvatar.src.endsWith('/')) {
+    pmAvatar.src = cardAvatar.src;
+    pmAvatar.style.display = '';
+    pmAvatarIcon.style.display = 'none';
+  } else {
+    pmAvatar.style.display = 'none';
+    pmAvatarIcon.style.display = 'flex';
+    pmAvatarIcon.style.background = cc.bg;
+    pmAvatarIcon.style.color = cc.color;
+    pmAvatarIcon.textContent = cc.abbr;
+  }
+
+  document.getElementById('pmName').textContent = name;
+  document.getElementById('pmClass').textContent = role.toUpperCase();
+  document.getElementById('pmFlag').src = `https://flagcdn.com/w40/${flag}.png`;
+  document.getElementById('pmCountry').textContent = country.toUpperCase();
+
+  // Body rows
+  const rows = [
+    ['Role',    role],
+    ['Nation',  country],
+    ['On team since', since],
+    ['Status',  status === 'active' ? '● Active' : '○ Inactive'],
+    ['Season',  'AF Winter 2024'],
+    ['Result',  '🥇 Champion'],
+  ];
+  if (captain) rows.splice(2, 0, ['Rank', 'Captain']);
+  if (sub)     rows.splice(2, 0, ['Role type', 'Substitute']);
+
+  document.getElementById('pmBody').innerHTML = rows.map(([label, val]) => {
+    const isStatus = label === 'Status';
+    const isResult = label === 'Result';
+    const cls = isStatus && val.startsWith('●') ? 'pm-value green'
+              : isResult ? 'pm-value gold'
+              : 'pm-value';
+    return `<div class="pm-row"><div class="pm-label">${label}</div><div class="${cls}">${val}</div></div>`;
+  }).join('');
+
+  const logsUrl = card.dataset.logs || '';
+  document.getElementById('pmFooter').innerHTML = `
+    <a class="pm-steam-btn" href="${steam}" target="_blank">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.004.105.004.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 15.27C1.862 20.307 6.486 24 11.979 24c6.627 0 11.999-5.373 11.999-12S18.605 0 11.979 0z"/></svg>
+      STEAM
+    </a>
+    ${logsUrl ? `<a class="pm-steam-btn" href="${logsUrl}" target="_blank">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+      LOGS.TF
+    </a>` : ''}
+    <div class="pm-active-badge ${status === 'active' ? 'active' : 'inactive'}">
+      ${status === 'active' ? '● ACTIVE' : '○ INACTIVE'}
+    </div>
+  `;
+
+  document.getElementById('profileOverlay').classList.add('visible');
+  // Update tab title
+  if (name) document.title = name + ' · Austrasia';
+}
+
+function closeProfile() {
+  document.getElementById('profileOverlay').classList.remove('visible');
+  // Tab title restores naturally via the countdown ticker on next tick
+}
+
+// Attach click handler to player cards (open profile instead of Steam link)
+document.querySelectorAll('.player-card[data-player]').forEach(card => {
+  card.addEventListener('click', function(e) {
+    e.preventDefault();
+    openProfile(this);
+  });
+});
+
+// Sub card anim-done
+document.querySelectorAll('.player-card.sub').forEach(c => c.addEventListener('animationend', () => c.classList.add('anim-done'), {once:true}));
+
+// Copy player name on click
+document.querySelectorAll('.player-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    const nameEl = this.querySelector('.player-name');
+    if (!nameEl) return;
+    const name = nameEl.textContent.trim();
+    navigator.clipboard.writeText(name).then(() => {
+      const tip = this.querySelector('.tooltip');
+      const orig = tip.textContent;
+      tip.textContent = '✓ COPIED: ' + name.toUpperCase();
+      tip.style.opacity = '1'; tip.style.transform = 'translateY(0)';
+      setTimeout(() => { tip.textContent = orig; tip.style.opacity = ''; tip.style.transform = ''; }, 1400);
+    }).catch(()=>{});
+  });
+});
+
+// Class filter
+document.getElementById('filterBar').addEventListener('click', function(e) {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  this.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cls = btn.dataset.class;
+  document.querySelectorAll('.player-card').forEach(card => {
+    card.classList.toggle('dimmed', cls !== 'all' && !card.classList.contains(cls));
+  });
+});
+
+// Copy link
+function copyPageLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    ['copyLinkTopBtn','copyLinkBtn'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const orig = btn.textContent;
+      btn.textContent = '✓ COPIED!';
+      btn.classList.add('share-copied');
+      setTimeout(() => { btn.textContent = orig; btn.classList.remove('share-copied'); }, 1800);
+    });
+  }).catch(()=>{});
+}
+
+// Steam avatar loader
+// Load avatars via wsrv.nl image proxy (bypasses Steam hotlink protection)
+function loadAvatars() {
+  document.querySelectorAll('.player-avatar').forEach(img => {
+    const parent = img.closest('.card-inner');
+    const fallback = parent ? parent.querySelector('.class-icon') : null;
+    const originalSrc = img.src;
+
+    if (!originalSrc || originalSrc === window.location.href) {
+      img.style.display = 'none';
+      if (fallback) fallback.style.display = 'flex';
+      return;
+    }
+
+    // Use wsrv.nl as a CORS-friendly image proxy
+    img.src = 'https://wsrv.nl/?url=' + encodeURIComponent(originalSrc) + '&w=80&h=80&fit=cover';
+    img.style.display = '';
+
+    img.onerror = function() {
+      // Try direct URL as fallback
+      if (!this.dataset.fallbackTried) {
+        this.dataset.fallbackTried = '1';
+        this.src = originalSrc;
+      } else {
+        this.style.display = 'none';
+        if (fallback) fallback.style.display = 'flex';
+      }
+    };
+  });
+}
+loadAvatars();
+
+// ── Smooth accordion close (details doesn't animate closing natively) ──
+document.querySelectorAll('details.season-block').forEach(details => {
+  const summary = details.querySelector('summary');
+  summary.addEventListener('click', e => {
+    if (!details.open) return; // opening — let browser handle, CSS grid handles it
+    e.preventDefault();
+    const body = details.querySelector('.season-body');
+    if (!body) return;
+    body.style.gridTemplateRows = '0fr';
+    body.addEventListener('transitionend', () => {
+      details.removeAttribute('open');
+      body.style.gridTemplateRows = '';
+    }, { once: true });
+  });
+});
+
+// ── Mobile swipe gesture on season accordion ──
+(function(){
+  const blocks = document.querySelectorAll('details.season-block:not(.upcoming)');
+  blocks.forEach(block => {
+    let startY = 0, startX = 0;
+    block.addEventListener('touchstart', e => {
+      startY = e.touches[0].clientY;
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    block.addEventListener('touchend', e => {
+      const dy = e.changedTouches[0].clientY - startY;
+      const dx = e.changedTouches[0].clientX - startX;
+      // Only trigger on a clear vertical swipe (more vertical than horizontal, >40px)
+      if (Math.abs(dy) > 40 && Math.abs(dy) > Math.abs(dx) * 1.5) {
+        if (dy < 0 && !block.open) {
+          // Swipe up → open
+          block.setAttribute('open', '');
+        } else if (dy > 0 && block.open) {
+          // Swipe down → close (trigger the smooth close)
+          const body = block.querySelector('.season-body');
+          if (body) {
+            body.style.gridTemplateRows = '0fr';
+            body.addEventListener('transitionend', () => {
+              block.removeAttribute('open');
+              body.style.gridTemplateRows = '';
+            }, { once: true });
+          }
+        }
+      }
+    }, { passive: true });
+  });
+})();
+
+// ── Page load progress bar ──
+(function(){
+  const bar = document.getElementById('page-progress');
+  if (!bar) return;
+  let w = 0;
+  bar.style.width = '20%';
+  const tick = setInterval(() => {
+    w = Math.min(w + Math.random() * 15, 85);
+    bar.style.width = w + '%';
+  }, 180);
+  window.addEventListener('load', () => {
+    clearInterval(tick);
+    bar.style.width = '100%';
+    setTimeout(() => { bar.style.opacity = '0'; }, 400);
+    setTimeout(() => { bar.style.display = 'none'; }, 800);
+  });
+})();
+
+// ── Logo parallax tilt ──
+(function(){
+  const logo = document.getElementById('mainLogo');
+  if (!logo) return;
+  logo.addEventListener('mousemove', e => {
+    const r = logo.getBoundingClientRect();
+    const cx = r.left + r.width / 2;
+    const cy = r.top + r.height / 2;
+    const dx = (e.clientX - cx) / (r.width / 2);
+    const dy = (e.clientY - cy) / (r.height / 2);
+    logo.style.transform = `perspective(400px) rotateY(${dx * 12}deg) rotateX(${-dy * 12}deg) scale(1.06)`;
+  });
+  logo.addEventListener('mouseleave', () => {
+    logo.style.transform = 'perspective(400px) rotateY(0deg) rotateX(0deg) scale(1)';
+  });
+})();
+
+// ── Confetti burst ──
+function launchConfetti(x, y) {
+  const canvas = document.getElementById('confetti-canvas');
+  if (!canvas) return;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const ctx = canvas.getContext('2d');
+  const colors = ['#E8621A','#c9a84c','#3ae07a','#e8e4d8','#5865F2'];
+  const particles = Array.from({length: 48}, () => ({
+    x, y,
+    vx: (Math.random() - 0.5) * 8,
+    vy: (Math.random() - 1.5) * 7,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    size: Math.random() * 5 + 3,
+    rot: Math.random() * 360,
+    rotV: (Math.random() - 0.5) * 10,
+    life: 1,
+    decay: Math.random() * 0.02 + 0.015
+  }));
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    particles.forEach(p => {
+      if (p.life <= 0) return;
+      alive = true;
+      p.x += p.vx; p.y += p.vy; p.vy += 0.25;
+      p.rot += p.rotV; p.life -= p.decay;
+      ctx.save();
+      ctx.globalAlpha = p.life;
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot * Math.PI / 180);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.6);
+      ctx.restore();
+    });
+    if (alive) requestAnimationFrame(draw);
+    else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  draw();
+}
+
+// Attach confetti to copy buttons
+const origCopyPageLink = copyPageLink;
+function copyPageLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    ['copyLinkTopBtn','copyLinkBtn'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const orig = btn.textContent;
+      btn.textContent = '✓ COPIED!';
+      btn.classList.add('share-copied');
+      const r = btn.getBoundingClientRect();
+      launchConfetti(r.left + r.width / 2, r.top + r.height / 2);
+      setTimeout(() => { btn.textContent = orig; btn.classList.remove('share-copied'); }, 1800);
+    });
+  }).catch(()=>{});
+}
+
+
+// ── Rich ambient background ──
+(function(){
+  const canvas = document.getElementById('particles-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', () => { resize(); initParticles(); });
+
+  // ── Hex grid helper ──
+  function hexPath(cx, cy, r, rot) {
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+      const a = rot + (Math.PI / 3) * i;
+      i === 0 ? ctx.moveTo(cx + r * Math.cos(a), cy + r * Math.sin(a))
+              : ctx.lineTo(cx + r * Math.cos(a), cy + r * Math.sin(a));
+    }
+    ctx.closePath();
+  }
+
+  // ── Layer 1: Static ghosted hex grid ──
+  function drawHexGrid() {
+    const R = 38, cols = Math.ceil(W / (R * 1.75)) + 2, rows = Math.ceil(H / (R * 1.5)) + 2;
+    ctx.save();
+    ctx.strokeStyle = 'rgba(232,98,26,0.045)';
+    ctx.lineWidth = 0.6;
+    for (let row = -1; row < rows; row++) {
+      for (let col = -1; col < cols; col++) {
+        const x = col * R * 1.75 + (row % 2 === 0 ? 0 : R * 0.875);
+        const y = row * R * 1.5;
+        hexPath(x, y, R, 0);
+        ctx.stroke();
+      }
+    }
+    ctx.restore();
+  }
+
+  // ── Layer 2: Floating nodes with connections ──
+  let nodes = [];
+  function initParticles() {
+    const count = Math.min(Math.floor(W * H / 18000), 70);
+    nodes = Array.from({ length: count }, () => ({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      vx: (Math.random() - 0.5) * 0.22,
+      vy: (Math.random() - 0.5) * 0.22,
+      r: Math.random() * 1.8 + 0.6,
+      // type: 0=dot, 1=small hex, 2=gold dot
+      type: Math.random() < 0.6 ? 0 : Math.random() < 0.7 ? 1 : 2,
+      rot: Math.random() * Math.PI * 2,
+      rotV: (Math.random() - 0.5) * 0.004,
+      pulse: Math.random() * Math.PI * 2,
+      pulseSpeed: Math.random() * 0.02 + 0.008,
+      baseOpacity: Math.random() * 0.18 + 0.05,
+    }));
+  }
+  initParticles();
+
+  const CONNECT_DIST = 120;
+
+  function drawNodes(t) {
+    // Draw connections first
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < CONNECT_DIST) {
+          const alpha = (1 - dist / CONNECT_DIST) * 0.12;
+          ctx.save();
+          ctx.globalAlpha = alpha;
+          ctx.strokeStyle = '#E8621A';
+          ctx.lineWidth = 0.4;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.stroke();
+          ctx.restore();
+        }
+      }
+    }
+
+    // Draw nodes
+    nodes.forEach(p => {
+      const pulse = Math.sin(p.pulse + t * p.pulseSpeed) * 0.5 + 0.5;
+      const opacity = p.baseOpacity * (0.7 + pulse * 0.3);
+      ctx.save();
+      ctx.globalAlpha = opacity;
+
+      if (p.type === 1) {
+        // Small hex outline
+        hexPath(p.x, p.y, p.r * 4, p.rot);
+        ctx.strokeStyle = '#E8621A';
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      } else if (p.type === 2) {
+        // Gold dot
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = '#c9a84c';
+        ctx.fill();
+      } else {
+        // Orange dot
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r * 0.8, 0, Math.PI * 2);
+        ctx.fillStyle = '#E8621A';
+        ctx.fill();
+      }
+      ctx.restore();
+
+      // Move
+      p.x += p.vx; p.y += p.vy; p.rot += p.rotV; p.pulse += p.pulseSpeed;
+      if (p.x < -30) p.x = W + 30;
+      if (p.x > W + 30) p.x = -30;
+      if (p.y < -30) p.y = H + 30;
+      if (p.y > H + 30) p.y = -30;
+    });
+  }
+
+  // ── Layer 3: Slow drifting large hex shapes (far background) ──
+  const bigHexes = Array.from({ length: 5 }, () => ({
+    x: Math.random() * W,
+    y: Math.random() * H,
+    r: Math.random() * 80 + 60,
+    rot: Math.random() * Math.PI,
+    rotV: (Math.random() - 0.5) * 0.0003,
+    vx: (Math.random() - 0.5) * 0.06,
+    vy: (Math.random() - 0.5) * 0.06,
+    opacity: Math.random() * 0.025 + 0.01,
+  }));
+
+  function drawBigHexes() {
+    bigHexes.forEach(h => {
+      ctx.save();
+      ctx.globalAlpha = h.opacity;
+      hexPath(h.x, h.y, h.r, h.rot);
+      ctx.strokeStyle = '#c9a84c';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+      ctx.restore();
+      h.x += h.vx; h.y += h.vy; h.rot += h.rotV;
+      if (h.x < -h.r) h.x = W + h.r;
+      if (h.x > W + h.r) h.x = -h.r;
+      if (h.y < -h.r) h.y = H + h.r;
+      if (h.y > H + h.r) h.y = -h.r;
+    });
+  }
+
+  // ── Main draw loop ──
+  let t = 0;
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    drawHexGrid();
+    drawBigHexes();
+    drawNodes(t);
+    t++;
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ── Map win-rate data + render ──
+(function(){
+  const mapData = [
+    {name:'Product',  color:'#b07fd4', wins:3, losses:2},
+    {name:'Upward',   color:'#e8874a', wins:2, losses:0},
+    {name:'Ashville', color:'#5ece8a', wins:3, losses:0},
+    {name:'Swiftwater',color:'#5eb4e0',wins:2, losses:0},
+    {name:'Vigil',    color:'#c9a84c', wins:2, losses:0},
+    {name:'Proot',    color:'#e07a7a', wins:2, losses:0},
+    {name:'Steel',    color:'#aaaaaa', wins:2, losses:0},
+  ];
+  const grid = document.getElementById('mapWinrateGrid');
+  if (!grid) return;
+  grid.innerHTML = mapData.map(m => {
+    const total = m.wins + m.losses;
+    const pct = total ? Math.round((m.wins / total) * 100) : 100;
+    return `<div class="mwr-cell">
+      <div class="mwr-map-name">${m.name}</div>
+      <div class="mwr-bar-track">
+        <div class="mwr-bar-fill" style="width:0%;background:${m.color}" data-pct="${pct}"></div>
+      </div>
+      <div class="mwr-record">
+        <span class="w">${m.wins}W</span>${m.losses ? ` <span class="l">${m.losses}L</span>` : ''}
+        <span style="opacity:0.5;margin-left:4px;">${pct}%</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Animate the bars in after a short delay
+  setTimeout(() => {
+    grid.querySelectorAll('.mwr-bar-fill').forEach(bar => {
+      bar.style.width = bar.dataset.pct + '%';
+    });
+  }, 600);
+})();
+
+// ── Card flip animation ──
+(function(){
+  const cards = document.querySelectorAll('.player-card[data-player]');
+  cards.forEach(card => {
+    // Sync avatar to back face when it loads
+    const frontAvatar = card.querySelector('.player-avatar');
+    const backAvatar = card.querySelector('.cfb-avatar');
+    const backAvatarIcon = card.querySelector('.cfb-avatar-icon');
+    if (frontAvatar && backAvatar) {
+      const syncAvatar = () => {
+        if (frontAvatar.src && !frontAvatar.src.endsWith('/') && frontAvatar.style.display !== 'none') {
+          backAvatar.src = frontAvatar.src;
+          backAvatar.style.display = '';
+          if (backAvatarIcon) backAvatarIcon.style.display = 'none';
+        } else {
+          backAvatar.style.display = 'none';
+          if (backAvatarIcon) backAvatarIcon.style.display = 'flex';
+        }
+      };
+      frontAvatar.addEventListener('load', syncAvatar);
+      // Also sync if already loaded
+      if (frontAvatar.complete && frontAvatar.src) syncAvatar();
+    }
+  });
+})();
+
+// Card flip — triggered by the flip hint button, not the whole card click
+// Main card click still opens the profile modal (handled below by openProfile)
+document.querySelectorAll('.player-card[data-player]').forEach(card => {
+  // Click elsewhere un-flips
+  document.addEventListener('click', function(e) {
+    if (!card.contains(e.target)) card.classList.remove('flipped');
+  });
+});
+
+// ── Keyboard navigation ──
+(function(){
+  // Escape: close profile modal OR un-flip cards
+  // Arrow keys: cycle through player cards when one is flipped
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      // Close profile overlay
+      const overlay = document.getElementById('profileOverlay');
+      if (overlay && overlay.classList.contains('visible')) {
+        closeProfile(); return;
+      }
+      // Un-flip any flipped card
+      document.querySelectorAll('.player-card.flipped').forEach(c => c.classList.remove('flipped'));
+    }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      const cards = [...document.querySelectorAll('.player-card[data-player]:not(.dimmed)')];
+      const flippedIdx = cards.findIndex(c => c.classList.contains('flipped'));
+      if (flippedIdx === -1) return;
+      cards[flippedIdx].classList.remove('flipped');
+      const next = e.key === 'ArrowRight'
+        ? (flippedIdx + 1) % cards.length
+        : (flippedIdx - 1 + cards.length) % cards.length;
+      cards[next].classList.add('flipped');
+      cards[next].scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+  });
+})();
+
+// ── Season sealed animation ──
+(function(){
+  const gfCard = document.querySelector('.grand-final-card');
+  if (!gfCard) return;
+  let triggered = false;
+  gfCard.style.cursor = 'pointer';
+  gfCard.addEventListener('click', () => {
+    if (triggered) return;
+    triggered = true;
+    // Gold overlay flash
+    const overlay = document.getElementById('sealed-overlay');
+    if (overlay) { overlay.classList.add('active'); setTimeout(() => overlay.classList.remove('active'), 2000); }
+    // Big confetti burst from centre of GF card
+    const r = gfCard.getBoundingClientRect();
+    const cx = r.left + r.width / 2;
+    const cy = r.top + r.height / 2;
+    // Use the sealed particles canvas for a bigger burst
+    const canvas = document.getElementById('sealed-particles');
+    if (!canvas) { triggered = false; return; }
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const ctx = canvas.getContext('2d');
+    const colors = ['#c9a84c','#E8621A','#fff','#3ae07a','#e8e4d8','#c9a84c','#c9a84c'];
+    const particles = Array.from({length: 120}, () => ({
+      x: cx, y: cy,
+      vx: (Math.random() - 0.5) * 14,
+      vy: (Math.random() - 2.2) * 9,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      size: Math.random() * 7 + 3,
+      rot: Math.random() * 360,
+      rotV: (Math.random() - 0.5) * 12,
+      life: 1,
+      decay: Math.random() * 0.012 + 0.008,
+    }));
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let alive = false;
+      particles.forEach(p => {
+        if (p.life <= 0) return;
+        alive = true;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.3;
+        p.vx *= 0.99;
+        p.rot += p.rotV; p.life -= p.decay;
+        ctx.save();
+        ctx.globalAlpha = p.life;
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot * Math.PI / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size * 0.4, p.size, p.size * 0.55);
+        ctx.restore();
+      });
+      if (alive) requestAnimationFrame(draw);
+      else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        setTimeout(() => { triggered = false; }, 500);
+      }
+    }
+    draw();
+  });
+})();
+
+
+// Add flip toggle button and logs link to each card
+document.querySelectorAll('.player-card[data-player]').forEach(card => {
+  // Flip button
+  const btn = document.createElement('button');
+  btn.className = 'card-flip-btn';
+  btn.textContent = '↻';
+  btn.title = 'Flip card';
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    card.classList.toggle('flipped');
+  });
+  card.appendChild(btn);
+
+  // Add logs.tf link to card back face hint row
+  const logsUrl = card.dataset.logs;
+  const hint = card.querySelector('.cfb-steam-hint');
+  if (hint && logsUrl) {
+    hint.innerHTML = `<a href="${logsUrl}" target="_blank" onclick="event.stopPropagation()" style="color:var(--af-muted);text-decoration:none;border:0.5px solid var(--af-border);padding:1px 6px;font-size:8px;letter-spacing:0.08em;transition:all 0.12s;" onmouseover="this.style.color='var(--af-orange)';this.style.borderColor='var(--af-orange)'" onmouseout="this.style.color='var(--af-muted)';this.style.borderColor='var(--af-border)'">↗ LOGS.TF</a>
+    <span style="opacity:0.5;margin-left:4px;">· TAP AGAIN → STEAM</span>`;
+  }
+});
+
+
+// ── Next match countdown ──
+(function(){
+  // June 6 2026, 20:30 local time (no timezone specified — uses visitor's local clock)
+  const target = new Date('2026-06-06T20:30:00');
+  const strip  = document.getElementById('countdownStrip');
+  const timer  = document.getElementById('cdTimer');
+  const baseTitle = document.title;
+
+  function pad(n){ return String(Math.floor(n)).padStart(2,'0'); }
+
+  function tick(){
+    const now  = new Date();
+    const diff = target - now;
+
+    if(diff <= 0){
+      // Match is live or past
+      if(timer) timer.innerHTML = '<div class="cd-live">● MATCH DAY</div>';
+      document.title = '● MATCH DAY · Austrasia';
+      return;
+    }
+
+    const days = Math.floor(diff / 864e5);
+    const hrs  = Math.floor((diff % 864e5) / 36e5);
+    const mins = Math.floor((diff % 36e5)  / 6e4);
+    const secs = Math.floor((diff % 6e4)   / 1e3);
+
+    const dEl = document.getElementById('cd-d');
+    const hEl = document.getElementById('cd-h');
+    const mEl = document.getElementById('cd-m');
+    const sEl = document.getElementById('cd-s');
+    if(dEl) dEl.textContent = pad(days);
+    if(hEl) hEl.textContent = pad(hrs);
+    if(mEl) mEl.textContent = pad(mins);
+    if(sEl) sEl.textContent = pad(secs);
+
+    // Update tab title every second with live countdown
+    if(days > 0){
+      document.title = days + 'd ' + pad(hrs) + 'h · Austrasia';
+    } else {
+      document.title = pad(hrs) + ':' + pad(mins) + ':' + pad(secs) + ' · Austrasia';
+    }
+
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+
+// Tab title handled inline in openProfile/closeProfile below
+
+</script>
+</body>
+</html>
